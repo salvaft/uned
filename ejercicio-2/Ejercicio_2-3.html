@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <title>Ejercicio 2-3</title>
+  </head>
+
+  <body>
+    <h1>Ejercicio 2-3</h1>
+    <div>
+      <p id="dni"></p>
+      <p id="date"></p>
+      <p id="email"></p>
+    </div>
+    <a href="/ejercicio-2/">Volver</a>
+  </body>
+  <script type="text/javascript">
+    function inputLoopAndCheck(
+      regexp,
+      question,
+      retryQuestion,
+      successMessage
+    ) {
+      let input = prompt(question);
+      while (regexp.test(input) === false) {
+        input = prompt(retryQuestion);
+      }
+      alert(successMessage);
+      return input;
+    }
+
+    // User inputs
+    let userInput = {
+      dni: "",
+      date: "",
+      email: "",
+    };
+
+    // DNI input y validacion
+    userInput.dni = inputLoopAndCheck(
+      new RegExp(/^\d{8}[A-z]$/),
+      "Por favor introduzca su DNI de la forma 12345678G (8 digitos y letra)",
+      "El DNI introducido no es correcto. Por favor introduzca su DNI de la forma 12345678G (8 digitos y letra)",
+      "DNI introducido correctamente"
+    );
+
+    // Fecha input y validaci'on
+    userInput.date = inputLoopAndCheck(
+      new RegExp(/^(0[1-9]|1[1-9]|2[1-9]|3[01])\/(0[1-9]|1[012])\/(\d{4})$/),
+      "Por favor introduzca la fecha actual (DD/MM/AAAA)",
+      "La fecha introducida no es correcta. Por favor introduzca la fecha actual (DD/MM/AAAA)",
+      "Fecha introducida correctamente"
+    );
+
+    // Email input y validacion
+    userInput.email = inputLoopAndCheck(
+      new RegExp(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      ),
+      "Por favor introduzca su email",
+      "El email introducido no es correcto. Por favor introduzca su email",
+      "Email introducido correctamente"
+    );
+
+    for (let prop in userInput) {
+      document.getElementById(
+        `${prop}`
+      ).innerHTML = `${prop}: ${userInput[prop]}`;
+    }
+  </script>
+</html>

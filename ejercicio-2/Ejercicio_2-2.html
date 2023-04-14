@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <title>Ejercicio 2-2</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Ejercicio 2-2</h1>
+
+      <p>
+        Los números múltiplos de 5 entre 1490 y 1600 (de mayor a menor y ambos
+        incluidos) son:
+      </p>
+
+      <div id="comentario"></div>
+      <a href="/ejercicio-2/">Volver</a>
+    </main>
+
+    <script type="text/javascript">
+      // Generar la cadena de texto con toda la lista de multiplos y almacenarla en la variable lista_numeros
+      let lista_numeros = [];
+      for (let i = 0; i * 5 + 1600 >= 1490; i--) {
+        lista_numeros.push(i * 5 + 1600);
+      }
+
+      //Escribir la cadena de texto en el contendor <div> identificado con el ID "comentario"
+      document.getElementById("comentario").innerHTML = lista_numeros;
+    </script>
+  </body>
+</html>

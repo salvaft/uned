@@ -1,0 +1,16 @@
+body {
+    max-width: 720px;
+    display: grid;
+    align-items: center;
+    margin-inline: auto;
+    grid-template-columns: 1fr;
+}
+
+.btn--grp {
+    display: flex;
+    gap: 2rem;
+}
+
+body>a {
+    margin-top: 2rem;
+}
