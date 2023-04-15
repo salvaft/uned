@@ -25,7 +25,8 @@
         </body>
     </main>
   <script type="text/javascript">
-    const btn = document.querySelector("button", () => {
+    const btn = document.querySelector("button")
+    btn.addEventListener('click', () => {
       // DNI input y validacion
       userInput.dni = inputLoopAndCheck(
         new RegExp(/^\d{8}[A-z]$/),
