@@ -11,7 +11,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
-    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="colors.js"></script>
   </head>
   <body>
     <main>
@@ -55,7 +56,6 @@
       <svg
         viewBox="0 0 256 105"
         xmlns="http://www.w3.org/2000/svg"
-        data-theme="light"
         width="100"
         class="netlify-logo-full-small"
       >
@@ -105,7 +105,7 @@
       </svg>
     </div>
 
-    <p>Hecho por Salvador Ferradás</p>
+    <p>Hecho por <span> Salvador Ferradás </span></p>
   </body>
 </html>
 
@@ -125,8 +125,12 @@
   .netlify-logo-full-small {
     max-width: 100px;
     max-height: 41px;
+    color: var(--primary);
   }
   body {
     max-width: 720px;
+  }
+  span {
+    color: var(--primary);
   }
 </style>
