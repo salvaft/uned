@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet"js/
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="../../styles.css" />
+
+    <title>Ejercicio 2-1</title>
+  </head>
+
+  <body>
+    <h1>Ejercicio_2-1</h1>
+    <button>Empezar</button>
+    <h2>Usando una funcion:</h2>
+    <div id="comentario"></div>
+    <h2>Usando computed proterty names:</h2>
+    <div id="comentario2"></div>
+    <a href="/js/ejercicio-2/">Volver</a>
+
+    <script type="text/javascript">
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", () => {
+        let question = "Introduce cuantos años tienes";
+        let age = -1;
+        while (isNaN(age) || age < 0 || age >= 100) {
+          age = prompt(question);
+          question =
+            "El dato introducido es incorrecto. Introduce de nuevo cuántos años tienes";
+        }
+
+        //Generar la cadena de texto a escribir y almacenar en la variable texto_comentario
+        function genText(age) {
+          if (age < 14) {
+            texto_comentario = `Tienes ${age} años, eres muy jovencito`;
+          } else if (age >= 14 && age < 18) {
+            texto_comentario = `Tienes ${age} años, probablemente seas un adolescente insoportable`;
+          } else if (age >= 18 && age < 65) {
+            texto_comentario = `Tienes ${age} años, eres mayor de edad`;
+          } else if (age >= 65) {
+            texto_comentario = `Disfruta de tu jubilación`;
+          }
+          return texto_comentario;
+        }
+        //Escribir la cadena de texto almacenada en la variable texto_comentario en el
+        // contendor <div> identificado con el ID "comentario"
+        document.getElementById("comentario").innerHTML = genText(age);
+
+        // Usando computed property names
+        const text = {
+          [age < 14]: `Tienes ${age} años, eres muy jovencito`,
+          [age >= 14 &&
+          age <
+            18]: `Tienes ${age} años, probablemente seas un adolescente insoportable`,
+          [age >= 18 && age < 65]: `Tienes ${age} años, eres mayor de edad`,
+          [age >= 65]: "Disfruta de tu jubilación",
+        };
+
+        //Escribir la cadena de texto almacenada en la variable texto_comentario en el
+        // contendor <div> identificado con el ID "comentario"
+        document.getElementById("comentario2").innerHTML = text[true];
+      });
+
+      // Pedir la edad hasta que se introduzca un dato correcto
+    </script>
+  </body>
+</html>

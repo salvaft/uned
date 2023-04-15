@@ -1,0 +1,297 @@
+/* Fallback */
+:root {
+    --font-size-title: var(--font-size-5);
+    --font-size-subtitle: var(--font-size-3);
+    --font-size-prose: var(--font-size-2);
+    --font-size-caption: var(--font-size-1);
+    --brand-accent: var(--sand-10);
+    --brand-color: var(--sand-8);
+    --brand-muted: var(--sand-6);
+
+    --color-surface-1: var(--sand-0);
+    --color-surface-2: var(--sand-2);
+    --color-surface-3: var(--sand-8);
+    --color-surface-4: var(--sand-11)
+}
+
+/*  Resets */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    color: var(--sand-8)
+}
+
+/* Estilos por defecto de los elementos mas utilizados */
+h1 {
+    color: var(--sand-10);
+    font-size: var(--font-size-5);
+}
+
+p {
+    font-size: var(--font-size-2);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--sand-2);
+}
+
+/* Estilos por defecto de elementos contenedores (layout mas que nada) */
+body {
+    max-width: var(--size-lg);
+    margin: auto;
+    background-color: var(--sand-0);
+
+}
+
+.layout--wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--size-9);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--size-9);
+
+    /* Me he permitido probar el anidado de CSS, disponible en Chrome a partir de la version 112 */
+}
+
+main>section {
+    padding-left: var(--size-7);
+    padding-right: var(--size-7);
+}
+
+
+
+.card--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: var(--size-5);
+    grid-column-gap: var(--size-8);
+    justify-content: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--size-4);
+
+    /* El titulo del articulo tiene la fuente un poco mas pequena que un encabezado de la cabecera */
+
+}
+
+article>h1 {
+    font-size: var(--font-size-3);
+
+}
+
+article>p {
+    max-width: 45ch;
+}
+
+
+
+footer {
+    padding: var(--size-7);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+
+/* Estilos "componentizados" */
+.hero {
+    background: center no-repeat url(https://placehold.co/1024x400/e6e4dc/FFF);
+    height: 30dvh;
+    min-height: 400px;
+}
+
+
+.hero--article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-10);
+
+}
+
+
+.hero--article>h1 {
+    font-size: var(--font-size-5);
+}
+
+
+.hero--article>p {
+    color: var(--sand-6);
+}
+
+.btn {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: var(--size-3);
+    border-radius: var(--radius-2);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.btn--accent {
+
+    background-color: var(--sand-11);
+    color: var(--sand-0);
+    box-shadow: none;
+    border: none;
+}
+
+.btn--accent:hover {
+    background-color: var(--sand-8);
+
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--sand-10);
+    padding: var(--size-2) var(--size-8);
+    box-shadow: none;
+    border: 4px solid var(--sand-10);
+}
+
+.btn--secondary:hover {
+    background-color: var(--sand-2);
+    color: var(--sand-6);
+    border-color: transparent;
+}
+
+
+.card {
+    display: grid;
+    grid-row-gap: var(--size-3);
+    grid-column-gap: var(--size-2);
+    /* Template areas permite confeccionar la disposicion de una manera mas declarativa que ir poniendo cuantas filas y columnas ocupa cada hijo */
+    grid-template-areas:
+        "🎴 h"
+        ". p";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: -webkit-min-content 1fr;
+    grid-template-columns: min-content 1fr;
+}
+
+
+.card>.logo {
+    grid-area: 🎴;
+    border-radius: var(--radius-round);
+    background-color: var(--sand-2);
+    color: var(--sand-8);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: var(--size-2)
+}
+
+
+.card>h1 {
+    grid-area: h;
+    align-self: end;
+    justify-self: start;
+}
+
+
+.card>p {
+    grid-area: p;
+    max-width: 35ch;
+}
+
+
+/* Retoques de secciones en particular. Cada una tiene su intringulis */
+#haceres {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--size-6);
+
+}
+
+#work {
+    display: grid;
+    grid-row-gap: var(--size-6);
+}
+
+#work>header {
+    display: grid;
+    grid-row-gap: var(--size-4);
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+
+        "🗞️ 📹";
+
+}
+
+#social>article {
+    grid-area: 🗞️;
+}
+
+#social>article>h1 {
+    font-size: var(--font-size-5);
+}
+
+#social>video {
+    max-width: 100%;
+    min-width: 100%;
+
+    grid-area: 📹;
+
+}
+
+
+/* Estilos del modal cuando esta abierto */
+dialog:modal {
+    position: fixed;
+    margin: auto;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+}
+
+dialog:modal>video {
+    max-width: 1440px;
+    aspect-ratio: 16/9;
+}
+
+dialog:modal>form {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+dialog:modal .btn {
+    background-color: transparent;
+    border: transparent;
+}
+
+/* El backdrop es la capa que queda detras del modal. Todo nativo */
+dialog:modal::-webkit-backdrop {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+dialog:modal::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+}

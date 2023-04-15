@@ -1,0 +1,87 @@
+/* reset de margenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable de color gris */
+:root {
+    --gris: #363636
+}
+
+/* Margen para los h1 que puse */
+h1 {
+    margin-block: 1rem
+}
+
+/* Fuente y relleno para todos los li */
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
+/* Todos los li pares tienen las fuente gris */
+li:nth-child(even) {
+    color: var(--gris);
+}
+
+/* Todos los li impares tienen las fuente blanca */
+li:nth-child(odd) {
+    color: white;
+}
+
+
+/* Esta manera es puro CSS sin tocar HTML. El tamano de la lista se debe conocer y si la lista crece o decrece habr'ia que cambiar el CSS.
+Que yo sepa no se pueden usar variables en el selector.
+El indice del elemento del medio de la lista es lo que habr'ia que cambiar por el 5 (V) de los selectores de aqu'i debajo.
+*/
+
+/* Esto selecciona los elementos #5,3,1 (luego se hace negativo) */
+/*                      V */
+#first li:nth-child(-2n+5) {
+    background-color: deepskyblue;
+}
+
+/* Esto selecciona los elementos #5,7,9,11... (solo tenemos hasta 10) */
+/*                     V */
+#first li:nth-child(2n+5) {
+    background-color: orange;
+}
+
+/* Sobrescribe el estilo del quinto */
+/*                  V */
+#first li:nth-child(5) {
+    background-color: hotpink;
+}
+
+
+/* En mi opinión esta de aquí abajo es una manera más escalable. Aqui no habría que tocar el CSS. Si la lista se hace a mano con HTML habr'ia que escribir la clase, pero con edicion multicursor seria rapido. Si se hace dinámicamente en servidor o cliente la otra solucion no es viable y esta si.*/
+/* Que yo sepa en CSS no hay selector de hermanos previos solo posteriores (~)*/
+
+/* Los impares de la primera mitad azules */
+
+li.first-half:nth-child(odd) {
+    background-color: deepskyblue;
+}
+
+/* Los impares de la segunda mitad naranjas */
+li.second-half:nth-child(odd) {
+    background-color: orange;
+}
+
+ul>.middle~li:nth-child(odd) {
+    background-color: orange;
+
+}
+
+/* El del medio rosa */
+.middle {
+    background-color: hotpink;
+}
+
+
+/* El del medio no tiene porque llevar clase pero habr'ia que jugar con la especificidad para que los que heredan el blanco sigan siendo blancos
+li:not(.second-half .first-half) {
+    background-color: hotpink;
+}

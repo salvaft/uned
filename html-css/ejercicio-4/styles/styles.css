@@ -1,0 +1,157 @@
+/* Fuente ubuntu que me gusta */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+/* Colores */
+:root {
+    --shadow: 17 100% 75%;
+    --alt-shadow: 232 100% 79%;
+    --form-bg: 47 58% 94%;
+    --pink: 300 100% 89%
+}
+
+/* Reset de margenes y forma de contenido */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* El body que ocupe todo el view port con la imagen de fondo y que no se distorsione. El grid se usa para centrar el formulario en el medio y medio. Eso hace que el espacio disponible a los elementos se ajuste al contenido */
+body {
+    /* Ilustracion hecha por @yaimisu https://www.instagram.com/yaimisu/?hl=en */
+    background: url('../static/wp.webp') center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-family: "Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-control {
+    /* Color pastel del form */
+    background: hsl(var(--form-bg));
+    /* Uso un flex columna y la utilidad .half. Podria hacer grid y template columns... */
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    /* Estilos visuales de padding interior borde y doble box shadow */
+    padding: 50px 100px;
+    border: 2px solid black;
+    box-shadow: 15px 15px 1px hsl(var(--shadow)), 15px 15px 1px 2px black;
+
+}
+
+/* Utilidad que centra verticalmente y los separa a ambos lados del contenedor los dos items contenidos */
+.half {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* MOdificacion para que si hay un input dentro tenga un ancho en el que caben dos apellidos  */
+.half>input {
+    max-width: 160px;
+}
+
+/* Estilos visuales para el drop down, colores fuente y altura. Tambien que el puntero sea de clickear */
+select {
+    background-color: hsl(var(--alt-shadow));
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    width: 100%;
+    height: 2rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 1px hsl(var(--shadow))
+}
+
+/* En el tab cambio el box shadow en lugar de poner un outline */
+select:focus {
+    outline: transparent;
+    box-shadow: 3px 3px 1px hsl(var(--pink))
+}
+
+/* Estilos generales sobre todo para el input text */
+input {
+    /* Bloque en lugar de en linea */
+    display: block;
+    font-family: inherit;
+    color: black;
+    /* A ojo */
+    font-size: 14pt;
+    line-height: 28pt;
+    border: none;
+    border-bottom: 5px solid black;
+    background: hsl(var(--form-bg));
+    padding-left: 5px;
+    outline: none;
+}
+
+label {
+    font-size: 14pt;
+}
+
+
+input:focus {
+    border-bottom: 5px solid hsl(var(--shadow));
+}
+
+/* Placeholder en rojo de los que son requeridos */
+input:required::placeholder {
+    color: tomato;
+}
+
+/* Cuando nos ponemos encima lo vuelvo a negro */
+input:focus:required::placeholder {
+    color: grey;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: inherit;
+    line-height: 28pt;
+    letter-spacing: 2px;
+    background: hsl(var(--shadow));
+    /* Se puede poner transparente o quitarlo... */
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px 1px hsl(var(--alt-shadow)), 3px 3px 1px 2px black;
+    /* En el hover background y color del texto, esto hace que la transicion sea suave. No pongo all pq en el tab quiero por defecto */
+    transition: 0.2s background ease-in-out, 0.2s color ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+
+/* Shadow en tab */
+button:focus {
+    box-shadow: 3px 3px 1px 1px hsl(var(--pink)), 3px 3px 1px 2px black;
+}
+
+/* Seleccion rosa en vez de azul  */
+::selection {
+    background: hsl(var(--pink));
+}
+
+/* Copiado de https://www.w3.org/WAI/tutorials/forms/labels/#hiding-label-text */
+.visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

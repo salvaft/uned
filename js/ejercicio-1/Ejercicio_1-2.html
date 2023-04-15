@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <title>Ejercicio 1-2</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Ejercicio_1-2</h1>
+
+      <button>Empezar</button>
+      <!-- TRWAGMYFPDXBNJZSQVHLCKET  -->
+      <a href="/js/ejercicio-1/">Volver</a>
+    </main>
+
+    <script type="text/javascript">
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", () => {
+        const alfabetoDNI = "TRWAGMYFPDXBNJZSQVHLCKET";
+        const DNI = prompt("Introduzca su DNI");
+        const numerosDNI = parseInt(DNI.substring(0, 8));
+        const letra = alfabetoDNI.charAt(numerosDNI % 23);
+        document.write("La letra de su DNI es: " + letra);
+      });
+    </script>
+  </body>
+</html>

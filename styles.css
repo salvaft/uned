@@ -14,3 +14,9 @@ body {
 body>a {
     margin-top: 2rem;
 }
+
+@media screen and (max-width: 720px) {
+    body {
+        padding-inline: 1rem
+    }
+}
