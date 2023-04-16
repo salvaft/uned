@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Torre de Hanoi</title>
-    <script defer src="js/Ejercicio_3-4.js"></script>
+    <script defer src="/js/Ejercicio_3-4.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
     <link rel="stylesheet" href="../../styles.css" />
-  <script src="../../colors.js"></script>
-</head>
+    <script defer src="../../lib/colors.js" type="module"></script>
+  </head>
 
   <body>
     <a href="/js/ejercicio-3/">Volver</a>
@@ -65,7 +65,7 @@
         <form name="fomulario">
           <label for="discos">Numero inicial de discos:</label>
           <input type="number" name="discos" id="discos" size="20" />
-          <button type="submit" id="btn"  />Resolver</button>
+          <button type="submit" id="btn">Resolver</button>
           <p class="error" id="error"></p>
           <div id="solucion"></div>
         </form>
@@ -75,13 +75,6 @@
 </html>
 
 <style>
-
-  header {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   main {
     display: grid;
     grid-template-columns: 1.8fr 1fr;
@@ -93,7 +86,6 @@
   @media screen and (max-width: 720px) {
     main {
       grid-template-columns: 1fr;
-
     }
-}
+  }
 </style>

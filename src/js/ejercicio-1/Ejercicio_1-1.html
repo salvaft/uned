@@ -7,8 +7,8 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
     <link rel="stylesheet" href="../../styles.css" />
-    <title>Ejercicio 1-3</title>
-    <script src="../../colors.js"></script>
+    <title>Ejercicio 1-1</title>
+    <script src="../../lib/colors.js" type="module"></script>
   </head>
 
   <body>
@@ -17,16 +17,15 @@
       <button>Empezar</button>
       <a href="/js/ejercicio-1/">Volver</a>
     </main>
-
     <script type="text/javascript">
       const btn = document.querySelector("button");
 
       btn.addEventListener("click", () => {
-        const frase = prompt("Introduce un texto con mayusculas y minusculas");
-        const mayus = frase.toUpperCase();
-        const minus = frase.toLowerCase();
-        document.write(`Texto en mayusculas: ${mayus} <br>`);
-        document.write(`Texto en minusculas: ${minus}`);
+        const primerSumando = parseInt(prompt("Introduzca el primer sumando"));
+        const segundoSumando = parseInt(
+          prompt("Introduzca el segundo sumando")
+        );
+        document.write(`El resultado es: ${primerSumando + segundoSumando}`);
       });
     </script>
   </body>

@@ -1,0 +1,25 @@
+{
+  "name": "uned",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "dev": "vite",
+    "build": "vite build --emptyOutDir" ,
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Salvador Ferradás",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^10.1.0",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.1.0"
+  },
+  "dependencies": {
+    "vite": "^4.2.1"
+  }
+}

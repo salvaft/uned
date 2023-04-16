@@ -15,6 +15,13 @@ body>a {
     margin-top: 2rem;
 }
 
+header {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media screen and (max-width: 720px) {
     body {
         padding-inline: 1rem

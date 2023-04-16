@@ -7,25 +7,28 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
     <link rel="stylesheet" href="../../styles.css" />
-    <title>Ejercicio 1-1</title>
-    <script src="../../colors.js"></script>
+    <title>Ejercicio 1-2</title>
+    <script src="../../lib/colors.js" type="module"></script>
   </head>
 
   <body>
     <main>
-      <h1>Ejercicio_1-1</h1>
+      <h1>Ejercicio_1-2</h1>
+
       <button>Empezar</button>
+      <!-- TRWAGMYFPDXBNJZSQVHLCKET  -->
       <a href="/js/ejercicio-1/">Volver</a>
     </main>
+
     <script type="text/javascript">
       const btn = document.querySelector("button");
 
       btn.addEventListener("click", () => {
-        const primerSumando = parseInt(prompt("Introduzca el primer sumando"));
-        const segundoSumando = parseInt(
-          prompt("Introduzca el segundo sumando")
-        );
-        document.write(`El resultado es: ${primerSumando + segundoSumando}`);
+        const alfabetoDNI = "TRWAGMYFPDXBNJZSQVHLCKET";
+        const DNI = prompt("Introduzca su DNI");
+        const numerosDNI = parseInt(DNI.substring(0, 8));
+        const letra = alfabetoDNI.charAt(numerosDNI % 23);
+        document.write("La letra de su DNI es: " + letra);
       });
     </script>
   </body>
