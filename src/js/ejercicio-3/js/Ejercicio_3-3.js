@@ -13,5 +13,3 @@ btn.addEventListener("click", (e) => {
     document.getElementById("dato2").value
   );
 });
-
-console.log(btn);

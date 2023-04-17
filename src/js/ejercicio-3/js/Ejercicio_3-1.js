@@ -1,11 +1,11 @@
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
 
-btn1.addEventListener("click", (e) => {
+btn1.addEventListener("click", () => {
   mensaje1();
 });
 
-btn2.addEventListener("click", (e) => {
+btn2.addEventListener("click", () => {
   mensaje2();
 });
 

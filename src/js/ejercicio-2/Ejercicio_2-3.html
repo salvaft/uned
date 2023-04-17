@@ -6,11 +6,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
-    <link rel="stylesheet" href="../../styles.css" />
+    <script src="main.js" type="module"></script>
 
     <title>Ejercicio 2-3</title>
-  <script src="../../lib/colors.js" type="module"></script>
-</head>
+  </head>
 
   <body>
     <main>
@@ -22,11 +21,11 @@
         <p id="email"></p>
       </div>
       <a href="/js/ejercicio-2/">Volver</a>
-        </body>
     </main>
+  </body>
   <script type="text/javascript">
-    const btn = document.querySelector("button")
-    btn.addEventListener('click', () => {
+    const btn = document.querySelector("button");
+    btn.addEventListener("click", () => {
       // DNI input y validacion
       userInput.dni = inputLoopAndCheck(
         new RegExp(/^\d{8}[A-z]$/),

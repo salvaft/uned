@@ -6,15 +6,16 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
-    <link rel="stylesheet" href="../../styles.css" />
+    <script src="main.js" type="module"></script>
+
     <title>Ejercicio 1-1</title>
-    <script src="../../lib/colors.js" type="module"></script>
   </head>
 
   <body>
     <main>
       <h1>Ejercicio_1-1</h1>
       <button>Empezar</button>
+      <p id="answer"></p>
       <a href="/js/ejercicio-1/">Volver</a>
     </main>
     <script type="text/javascript">
@@ -25,7 +26,9 @@
         const segundoSumando = parseInt(
           prompt("Introduzca el segundo sumando")
         );
-        document.write(`El resultado es: ${primerSumando + segundoSumando}`);
+        document.getElementById("answer").innerText = `El resultado es: ${
+          primerSumando + segundoSumando
+        }`;
       });
     </script>
   </body>

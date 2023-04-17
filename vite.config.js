@@ -9,6 +9,12 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   root: path.join(__dirname, "src"),
+  resolve: {
+    alias: {
+      "@src": path.resolve(__dirname, "./src"),
+      "@lib": path.resolve(__dirname, "./src/lib"),
+    },
+  },
   build: {
     outDir: path.join(__dirname, "dist"),
     rollupOptions: {

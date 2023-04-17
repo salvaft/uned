@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "dev": "vite",
-    "build": "vite build --emptyOutDir" ,
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -17,7 +17,10 @@
   "devDependencies": {
     "glob": "^10.1.0",
     "gulp": "^4.0.2",
-    "gulp-zip": "^5.1.0"
+    "gulp-zip": "^5.1.0",
+    "open-props": "^1.5.7",
+    "postcss-jit-props": "^1.0.13",
+    "postcss-preset-env": "^8.3.2"
   },
   "dependencies": {
     "vite": "^4.2.1"

@@ -10,10 +10,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
-    <link rel="stylesheet" href="../../styles.css" />
-
-  <script src="../../lib/colors.js" type="module"></script>
-</head>
+    <script src="main.js" type="module"></script>
+  </head>
 
   <body>
     <a href="/js/ejercicio-3/">Volver</a>
@@ -21,7 +19,6 @@
     <main>
       <h1>Ejercicio_3-2</h1>
       <section class="s1">
-
         <h2>Cálculo del factorial:</h2>
         <form name="fomulario1" action="none">
           Número: <input type="number" id="num1" size="20" />
@@ -38,25 +35,25 @@
           Conversión a grados Fahrenheit:
           <input disabled type="text" id="idFahrenheit" size="20" readonly />
           <button type="submit" id="btn-fahren">Calcula Fahrenheit</button>
+        </form>
       </section>
     </main>
-    </form>
   </body>
 </html>
 <style>
   main {
     display: grid;
-    grid-template-areas: "h1 h1"
-    "s1 s2";
+    grid-template-areas:
+      "h1 h1"
+      "s1 s2";
     column-gap: 1rem;
     align-items: end;
   }
-  h1 { 
+  h1 {
     grid-area: h1;
   }
 
-
-  .s1 { 
+  .s1 {
     grid-area: s1;
   }
 
