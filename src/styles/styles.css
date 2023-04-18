@@ -8,6 +8,10 @@ body {
     grid-template-columns: 1fr;
 }
 
+.lg {
+    max-width: var(--size-lg);
+}
+
 .btn--grp {
     display: flex;
     gap: 2rem;
@@ -17,6 +21,15 @@ body>a {
     margin-top: 2rem;
 }
 
+main {
+    display: grid;
+}
+
+.two--cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
 header {
     margin: auto;
     display: flex;
@@ -24,8 +37,27 @@ header {
     align-items: center;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flex-space {
+    justify-content: space-between;
+}
+
+
+.error {
+    color: tomato;
+}
+
 @media screen and (max-width: 720px) {
     body {
         padding-inline: 1rem
+    }
+
+    main {
+        grid-template-columns: 1fr;
     }
 }
