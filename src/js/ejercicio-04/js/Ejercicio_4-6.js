@@ -5,16 +5,16 @@ window.addEventListener("load", () => {
 });
 
 const bldgs = [
-  ["fotoDerecho.jpg", "Facultad de Derecho"],
-  ["fotoGeografiaHistoria.jpg", "Facultad de Geografia e Historia"],
-  ["fotoFilosofia.jpg", "Facultad de Filosofia"],
-  ["fotoPsicologia.jpg", "Facultad de Psicologia"],
-  ["fotoIndustriales130.jpg", "Facultad de Industriales"],
-  ["fotoCiencias.jpg", "Facultad de Ciencias"],
-  ["fotoEconomicas.jpg", "Facultad de Economicas"],
-  ["fotoFilologia.jpg", "Facultad de Filologia"],
-  ["fotoEducacion.jpg", "Facultad de Educacion"],
-  ["fotoInformatica.jpg", "Facultad de Informatica"],
+  ["fotoDerecho.webp", "Facultad de Derecho"],
+  ["fotoGeografiaHistoria.webp", "Facultad de Geografia e Historia"],
+  ["fotoFilosofia.webp", "Facultad de Filosofia"],
+  ["fotoPsicologia.webp", "Facultad de Psicologia"],
+  ["fotoIndustriales130.webp", "Facultad de Industriales"],
+  ["fotoCiencias.webp", "Facultad de Ciencias"],
+  ["fotoEconomicas.webp", "Facultad de Economicas"],
+  ["fotoFilologia.webp", "Facultad de Filologia"],
+  ["fotoEducacion.webp", "Facultad de Educacion"],
+  ["fotoInformatica.webp", "Facultad de Informatica"],
 ];
 
 // Preload de imágenes para que el carrusel no de saltos.
