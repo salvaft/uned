@@ -15,6 +15,11 @@ const bldgs = [
   ["fotoInformatica.jpg", "Facultad de Informatica"],
 ];
 
+// Preload de imágenes para que el carrusel no de saltos. Contamos con que el usuario no tenga la cache desactivada
+bldgs.forEach(([foto, _]) => {
+  new Image().src = `/img/${foto}`;
+});
+
 function cambiarFoto() {
   // Random number between 0 and bldgs.length
   const randomPick = Math.floor(Math.random() * bldgs.length);
