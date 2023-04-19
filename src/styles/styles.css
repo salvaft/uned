@@ -1,4 +1,4 @@
-@import url(https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css);
+@import url('https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css');
 
 body {
     max-width: 720px;
@@ -6,6 +6,10 @@ body {
     align-items: center;
     margin-inline: auto;
     grid-template-columns: 1fr;
+
+    &>a {
+        margin-top: 2rem;
+    }
 }
 
 .lg {
@@ -15,10 +19,6 @@ body {
 .btn--grp {
     display: flex;
     gap: 2rem;
-}
-
-body>a {
-    margin-top: 2rem;
 }
 
 main {
