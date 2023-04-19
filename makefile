@@ -1,4 +1,3 @@
-
 EJERCICIO := 04
 ALUMNO := ferradas_troitino_salvador
 SUBMITDIR := ./src/js/ejercicio-$(EJERCICIO)

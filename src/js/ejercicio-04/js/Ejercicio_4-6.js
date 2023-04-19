@@ -1,6 +1,6 @@
 // JavaScript Document
-// En vez de ponerlo inline se puede hacer en el scirpt
-document.body.onload = cambiarFoto;
+// En vez de ponerlo inline se puede hacer en el scirpt. Otra forma usando addEventListener
+window.addEventListener("load", cambiarFoto);
 
 const bldgs = [
   ["fotoDerecho.jpg", "Facultad de Derecho"],

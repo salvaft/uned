@@ -1,8 +1,6 @@
 // JavaScript Document
 
-// document.body.onload = ponhora;
-document.body.addEventListener("load", ponhora, true);
-
+document.body.onload = ponhora;
 // La función escribe() tiene un parámetro de entrada con una cadena de texto con el código
 // HTML que se quiere mostrar dentro de la capa con ID "cuadro_texto". Esta función el alumno
 // tiene que usarla pero no es necesario modificarla
