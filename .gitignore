@@ -22,6 +22,8 @@ pnpm-debug.log*
 
 # Unoptimized picture files
 **/*.png
+**/*.jpg
 
 # zipfiles
 **/*.zip
+*.tar.gz

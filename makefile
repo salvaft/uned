@@ -1,12 +1,17 @@
 EJERCICIO := 04
+EJERCICIO_DIR := ejercicio
 ALUMNO := ferradas_troitino_salvador
-SUBMITDIR := ./src/js/ejercicio-$(EJERCICIO)
-ZIPCONTENT := $(SUBMITDIR)/*
+SOURCEDIR := ./src/js/$(EJERCICIO_DIR)-$(EJERCICIO)
+TEMP := /tmp/uned
+ZIPCONTENT := $(EJERCICIO_DIR)-$(EJERCICIO)
 ZIPNAME :=$(EJERCICIO)_$(ALUMNO)
 
 submit:
-	sed -i 's#preloadedImg.src = `/img/$${foto}`#preloadedImg.src = `./img/$${foto}`#' $(SUBMITDIR)/js/Ejercicio_4-6.js
-	zip -r $(ZIPNAME).zip $(ZIPCONTENT)
-	sed -i 's#preloadedImg.src = `./img/$${foto}`#preloadedImg.src = `/img/$${foto}`#' $(SUBMITDIR)/js/Ejercicio_4-6.js
+	rsync -avz $(SOURCEDIR) $(TEMP)
+	sed -i 's#preloadedImg.src = `/img/$${foto}`#preloadedImg.src = `./img/$${foto}`#' $(TEMP)/$(EJERCICIO_DIR)-$(EJERCICIO)/js/Ejercicio_4-6.js
+	tar -zcvf ./$(ZIPNAME).tar.gz --directory=$(TEMP) $(ZIPCONTENT)
+
+
+	
 
 

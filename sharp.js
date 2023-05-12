@@ -9,8 +9,13 @@ const __dirname = path.dirname(__filename);
 
 const exerciseImgs = glob.sync("./src/js/ejercicio-04/img/*.jpg");
 
-exerciseImgs.forEach(async (img) => {
+exerciseImgs.forEach((img) => {
   const newName = img.replace("jpg", "webp");
-  await sharp(img).toFile(newName);
-  fs.copyFileSync(newName, newName.replace("js/ejercicio-04", "public"));
+  console.log("Starting to process: ", img);
+  sharp(img)
+    .toFile(newName)
+    .then(() => {
+      fs.copyFileSync(newName, newName.replace("js/ejercicio-04", "public"));
+      console.log("Done with: ", newName);
+    });
 });
