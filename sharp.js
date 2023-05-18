@@ -7,7 +7,7 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const exerciseImgs = glob.sync("./src/js/ejercicio-04/img/*.jpg");
+const exerciseImgs = glob.sync("./src/html-css/ejercicio-6/**/*.jpg");
 
 exerciseImgs.forEach((img) => {
   const newName = img.replace("jpg", "webp");
@@ -15,7 +15,7 @@ exerciseImgs.forEach((img) => {
   sharp(img)
     .toFile(newName)
     .then(() => {
-      fs.copyFileSync(newName, newName.replace("js/ejercicio-04", "public"));
+      // fs.copyFileSync(newName, newName.replace("js/ejercicio-04", "public"));
       console.log("Done with: ", newName);
     });
 });
