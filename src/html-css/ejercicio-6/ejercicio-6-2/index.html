@@ -11,18 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+  <!-- Tailwind es una coleccion de clases de CSS, en las que cada clase cambia una propiedad especifica del elemento. -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    // Siguiendo la documentacion de Tailwind, podemos crear una configuracion personalizada, en la que podemos definir que por defecto la clase contenedor centre el contenido (margin-inline-auto) si no me equivoco
+    // El container principalmente igual que en bootstrap, pone un mismo min y maxwidth a partir de ciertos break points.
+    //Aparte de eso container obliga a que el elemento tenga width 100% aunque tenga un display flex por ejemplo
+
     tailwind.config = {
       theme: {
         container: {
           center: true,
         },
         extend: {
+          // Anado fuentes que importo en el head y tailwind crea automaticamente las utility classes
           fontFamily: {
             'kristi': 'kristi',
             'outfit': "Outfit"
           },
+          // Lo mismo para los colores
           colors: {
             'oscuro': "#333333",
             'clear': "#f7f7f7",
@@ -38,13 +45,26 @@
 
   </script>
 </head>
+<!-- Me gustaria aclarar que el beneficio de usar tailwind de no tener que definir tu clases que engloben ciertas propiedades sale a relucir cuando se usan -->
+<!-- en librerias tipo react svelte etc. -->
+<!-- En una pagina como esta repetir las mismas clases tantas veces es un poco contrario a la filosofia que todo programador deberia seguir -->
 
 <body>
+  <!-- Cada utility class es una propiedad especifica, flex es igual a display flex -->
+  <!-- p-4 es padding todo alrededor de 1 rem. Hay varias medidas -->
+  <!-- text clear es igual a color: var(--clear) -->
+  <!-- justify-between es igual a justify-content: space-between -->
   <nav class="flex p-4 bg-oscuro text-clear justify-between">
-    <div class="sm:container flex justify-between  items-center">
-
+    <!-- Lo bueno de tailwind es que usa modificadores on the fly. Igual que los breakpoints de bootstrap  -->
+    <!-- Con los break points md, sm, lg, es como se hace el responsive -->
+    <!-- El approach es mobile first, de pequeno a grande, entonces lo que pongo sin modificador, es lo que va a tener en cuenta HASTA que encuentre un break point -->
+    <!-- Entonces para el nav lo que quiero en mobile es dos filas de navbar (sencillito) y a partir de md720px quiero una osla fila md:flex-row es como @media min-width 640px {flex direction: row}-->
+    <div class="container flex flex-col md:flex-row justify-between  items-center">
+      <!-- Fuente y tamaño de letra -->
       <h1 class="text-8xl font-kristi">Tinti</h1>
+      <!-- Otra vez dentro de la lista desordenada, display flex y separacion usando tailwind -->
       <ul class="flex gap-6" role="group">
+        <!-- Al igual que los breakpoints, tailwind pone a disposicion modificadores para el hover, mouse in, mouse out etc usando los dos puntos -->
         <li class="text-2xl uppercase hover:text-accent"> <a href="#">NavLink</a></li>
         <li class="text-2xl uppercase hover:text-accent"> <a href="#">NavLink</a></li>
         <li class="text-2xl uppercase hover:text-accent"><a href="#">NavLink</a></li>
@@ -52,37 +72,47 @@
       </ul>
     </div>
   </nav>
-  <main class="grid auto-rows-1fr">
+  <!-- Todo el contenido despues de la navbar lo dividido en secciones que son muy parecidas y todas dentro de un main -->
+  <!-- El main le pongo display grid y auto-rows-1fr es lo mismo que grid-auto-rows: 1fr, es decir, que cada fila tiene el mismo tamano -->
+  <!-- Sin embargo esto quiero que pase a partir de md:720px @media (min-width: 720px) {grid-auto-rows: 1fr} -->
+  <main class="md:grid auto-rows-1fr">
 
     <!-- First section -->
-    <section class="bg-clear">
-      <div class="sm:container h-full grid grid-cols-2 justify-items-center px-8">
+    <!-- bg es para el color del fondo -->
+    <section class="bg-clear py-4 sm:pb-0 md:pt-0">
+      <!-- Dentro de cada seccion quiero dos divisiones (texto e imagen) la imagen la escondo hasta que no hayan 700 y algo px de width (md) entonces pongo que sea 2 columnas iguales 1fr 1fr a partir de 640 con sm:grid-cols-2-->
+      <!-- La altura siempre que la division interior ocupe el 100% todas ya que puse que todas las filas eran iguales y unas pueden ser mas grandes que otras -->
+      <div class="container h-full grid md:grid-cols-2 justify-items-center px-8">
         <div class="flex flex-col gap-8 justify-center items-center">
           <div class="flex flex-col gap-2 items-center">
 
             <img height="300" width="300" src="img/logo.webp" alt="">
-            <h2 class="font-kristi text-8xl">yaimisu tattoo</h2>
+            <h2 class="font-kristi text-8xl text-center">yaimisu tattoo</h2>
           </div>
+          <!-- Aqui ya se van repitiendo la mayoria de las utility classes y comento menos -->
           <div role="group" class="flex flex-col gap-2 items-center">
             <button class="px-4 py-2 text-lg text-clear rounded-full bg-oscuro">¡Contáctanos!</button>
             <p class="text-lg"><span>¡Coge cita sin </span><br>compromiso!</p>
           </div>
 
         </div>
-        <div class="self-end">
+        <!-- Hidden es display none en tailwind. Basicamente estoy poniendo que la imagen se muestre a partir de 640px en el centro. Y a partir de 1024 (lg) la alinee en el final de la caja -->
+        <div class="hidden sm:block self-center lg:self-end">
           <img height="700" width="500" src="./img/pexels-lucas-alves-3611570.webp" alt="">
         </div>
       </div>
     </section>
     <!-- 2nd- section -->
-    <section class="bg-oscuro text-clear">
-      <div class="sm:container h-full grid grid-cols-2 justify-items-center px-8">
+    <section class="bg-oscuro text-clear py-6 lg:py-0">
+      <!-- Para esta seccion aplico los mismos principios que para la primera pero la imagen se vea cuando haya dos columnas a partir de  md -->
+      <div class="sm:container h-full grid md:grid-cols-2 justify-items-center px-8">
+        <!-- La imagen la pongo posicion absoluta para que de la sensacion que este sentada y le pongo que clipee el overflow. esto se ve sobretodo a partir de lg -->
         <div class=" overflow-clip">
-          <img class="relative -bottom-24" height="906" width="450" src="./img/pexels-larissa-wolf-2.webp" alt="">
+          <img class="hidden md:block relative -bottom-24 overflow-clip" height="906" width="450"
+            src="./img/pexels-larissa-wolf-2.webp" alt="">
         </div>
-        <article class="relative flex flex-col gap-4 justify-self-center justify-center max-w-[65%]">
-
-
+        <!-- Se pueden usar utility classes on de fly, por ejemplo aqui pongo el max-width a un valor arbitrario de 65 -->
+        <article class="relative flex flex-col gap-4 justify-self-center justify-center lg:max-w-[65%]">
           <h1 class="font-kristi text-7xl uppercase text-inherit relative">
             Asi empezó todo,
 
@@ -114,13 +144,14 @@
       </div>
     </section>
     <!-- 3rd section -->
-    <section class="bg-clear text-oscuro">
-      <div class="container h-full grid grid-cols-2 justify-items-center px-8">
-        <article class="relative flex flex-col gap-4 justify-self-center isolate justify-center max-w-[65%]">
+    <section class="bg-clear text-oscuro py-6 lg:py-0">
+      <div class="container h-full grid md:grid-cols-2 justify-items-center px-8">
+        <article class="relative flex flex-col gap-4 justify-self-center isolate justify-center lg:max-w-[65%]">
 
           <h1 class="relative font-kristi text-7xl text-inherit uppercase ">Asi empezó todo,
 
-            <img width="100" height="143" class="absolute -top-5 right-10 -z-10" src="img/smili.webp" alt="">
+            <img width="100" height="143" class=" absolute -top-5 right-10 -z-10 opacity-40" src="img/smili.webp"
+              alt="">
 
             <br> historia de un comienzo
           </h1>
@@ -143,14 +174,14 @@
             Sed a dolor dolor.
         </article>
         <div class=" overflow-clip">
-          <img class="flex relative -bottom-44" height="668" width="500" src="./img/pexels-vova-kras-2726161.webp"
-            alt="">
+          <img class="hidden md:flex relative -bottom-44" height="668" width="500"
+            src="./img/pexels-vova-kras-2726161.webp" alt="">
         </div>
       </div>
     </section>
   </main>
-  <footer class="flex p-4 bg-oscuro text-claroscuro">
-    <div class="sm:container flex justify-between items-center">
+  <footer class=" p-4 bg-oscuro text-claroscuro">
+    <div class="sm:container flex-col lg:flex-row flex justify-between items-center">
       <div class="flex justify-start gap-2 items-center">
 
 
