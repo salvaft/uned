@@ -14,7 +14,7 @@
     // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
     // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
     // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-    // Lo hago de esta manera con un script tag para poder usar el alias @src
+    // Lo hago de esta manera con un script tag para poder usar el alias @src ya que estos ejercicios empiezan a estar bastante anidados en el repo
     import "@src/styles/volver.css"
   </script>
   <!-- Tailwind es una coleccion de clases de CSS, en las que cada clase cambia una propiedad especifica del elemento. -->
@@ -48,8 +48,8 @@
 
   </script>
 </head>
-<!-- Me gustaria aclarar que el beneficio de usar tailwind de no tener que definir tu clases que engloben ciertas propiedades sale a relucir cuando se usan -->
-<!-- en librerias tipo react svelte etc. -->
+<!-- Me gustaria aclarar que el beneficio de usar tailwind viene de no tener que definir tu clases que engloben ciertas propiedades sale a relucir cuando se usan -->
+<!-- componentes en librerias tipo react svelte etc. -->
 <!-- En una pagina como esta repetir las mismas clases tantas veces es un poco contrario a la filosofia que todo programador deberia seguir -->
 
 <body>
@@ -67,11 +67,12 @@
       <h1 class="text-8xl font-kristi">Tinti</h1>
       <!-- Otra vez dentro de la lista desordenada, display flex y separacion usando tailwind -->
       <ul class="flex gap-6" role="group">
+        <!-- Fuente tamano lg de normal y apartir del breakpoing de 1024px tamano 2xl -->
         <!-- Al igual que los breakpoints, tailwind pone a disposicion modificadores para el hover, mouse in, mouse out etc usando los dos puntos -->
-        <li class="text-2xl uppercase hover:text-accent"> <a href="#">NavLink</a></li>
-        <li class="text-2xl uppercase hover:text-accent"> <a href="#">NavLink</a></li>
-        <li class="text-2xl uppercase hover:text-accent"><a href="#">NavLink</a></li>
-        <li class="text-2xl uppercase hover:text-accent"><a href="#">NavLink</a></li>
+        <li class="text-lg lg:text-2xl uppercase hover:text-accent"> <a href="#">NavLink</a></li>
+        <li class="text-lg lg:text-2xl uppercase hover:text-accent"> <a href="#">NavLink</a></li>
+        <li class="text-lg lg:text-2xl uppercase hover:text-accent"><a href="#">NavLink</a></li>
+        <li class="text-lg lg:text-2xl uppercase hover:text-accent"><a href="#">NavLink</a></li>
       </ul>
     </div>
   </nav>
@@ -100,8 +101,8 @@
           </div>
 
         </div>
-        <!-- Hidden es display none en tailwind. Basicamente estoy poniendo que la imagen se muestre a partir de 640px en el centro. Y a partir de 1024 (lg) la alinee en el final de la caja -->
-        <div class="hidden sm:block self-center lg:self-end">
+        <!-- Hidden es display none en tailwind. Basicamente estoy poniendo que la imagen se muestre a partir de 700px en el centro. Y a partir de 1024 (lg) la alinee en el final de la caja -->
+        <div class="hidden md:block self-center lg:self-end">
           <img height="700" width="500" src="./img/pexels-lucas-alves-3611570.webp" alt="">
         </div>
       </div>
@@ -251,11 +252,11 @@
           </svg>
 
         </a>
-        <p class="text-lg font-outfit font-bold uppercase">
+        <p class="lg:text-lg font-outfit font-bold uppercase">
           123 calle madrid 777-555-666
         </p>
       </div>
-      <p class="text-outfit text-lg uppercase whitespace-nowrap">yaimisu tattoo studio. All rights reserved
+      <p class="text-outfit lg:text-lg uppercase whitespace-nowrap">yaimisu tattoo studio. All rights reserved
       </p>
     </div>
   </footer>
