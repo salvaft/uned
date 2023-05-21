@@ -10,7 +10,12 @@
     />
     <title>Ejercicio 4-4 - DOM básico</title>
     <!-- El main es para el entry point del bundler -->
-    <script src="../../main.js" type="module"></script>
+    
+  <script type="module">
+    // El bundler lo organiza en un solo script. Esto es para poder usar el alias
+    import "@src/main.js"
+  </script>
+</script>
     <script type="module" src="js/Ejercicio_4-4.js" defer></script>
   </head>
 

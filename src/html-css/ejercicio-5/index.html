@@ -28,16 +28,11 @@
 </head>
 
 <script type="module">
-  const sideEffects = async () => {
-    // import module for side effects
-    // De esta manera el boton de volver me aparece a mi solo en desarrollo. En el bundling se pasa a un link de css
-    try {
-      await import("@src/styles/volver.css");
-    } catch {
-      document.getElementById("volver").style.display = "none";
-    }
-  }
-  sideEffects();
+  // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
+// (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
+// Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
+// Lo hago de esta manera con un script tag para poder usar el alias @src
+import "@src/styles/volver.css"
 </script>
 
 <body>
