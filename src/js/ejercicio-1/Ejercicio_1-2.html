@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    
+<head>
+  <meta charset="utf-8" />
+
+
   <script type="module">
     // El bundler lo organiza en un solo script. Esto es para poder usar el alias
     import "@src/main.js"
-  
+  </script>
 
-    <title>Ejercicio 1-2</title>
-  </head>
+  <title>Ejercicio 1-2</title>
+</head>
 
-  <body>
-    <a href="/js/ejercicio-1/">Volver</a>
-    <main>
-      <h1>Ejercicio_1-2</h1>
-      <h2>Obtiene letra del DNI</h2>
-      <button>Empezar</button>
-      <p id="answer"></p>
-      <!-- TRWAGMYFPDXBNJZSQVHLCKET  -->
-    </main>
+<body>
+  <a href="/js/ejercicio-1/">Volver</a>
+  <main>
+    <h1>Ejercicio_1-2</h1>
+    <h2>Obtiene letra del DNI</h2>
+    <button>Empezar</button>
+    <p id="answer"></p>
+    <!-- TRWAGMYFPDXBNJZSQVHLCKET  -->
+  </main>
 
-    <script type="text/javascript">
-      const btn = document.querySelector("button");
+  <script type="text/javascript">
+    const btn = document.querySelector("button");
 
-      btn.addEventListener("click", () => {
-        const alfabetoDNI = "TRWAGMYFPDXBNJZSQVHLCKET";
-        const DNI = prompt("Introduzca su DNI");
-        const numerosDNI = parseInt(DNI.substring(0, 8));
-        const letra = alfabetoDNI.charAt(numerosDNI % 23);
-        document.getElementById("answer").innerText =
-          "La letra de su DNI es: " + letra;
-      });
-    </script>
-  </body>
+    btn.addEventListener("click", () => {
+      const alfabetoDNI = "TRWAGMYFPDXBNJZSQVHLCKET";
+      const DNI = prompt("Introduzca su DNI");
+      const numerosDNI = parseInt(DNI.substring(0, 8));
+      const letra = alfabetoDNI.charAt(numerosDNI % 23);
+      document.getElementById("answer").innerText =
+        "La letra de su DNI es: " + letra;
+    });
+  </script>
+</body>
+
 </html>

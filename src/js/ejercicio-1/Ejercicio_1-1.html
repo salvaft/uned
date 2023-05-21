@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    
+<head>
+  <meta charset="utf-8" />
+
+
   <script type="module">
     // El bundler lo organiza en un solo script. Esto es para poder usar el alias
     import "@src/main.js"
-  
+  </script>
 
-    <title>Ejercicio 1-1</title>
-  </head>
+  <title>Ejercicio 1-1</title>
+</head>
 
-  <body>
-    <a href="/js/ejercicio-1/">Volver</a>
-    <main>
-      <h1>Ejercicio_1-1</h1>
-      <h2>Suma dos números</h2>
-      <button>Empezar</button>
-      <p id="answer"></p>
-    </main>
-    <script type="text/javascript">
-      const btn = document.querySelector("button");
+<body>
+  <a href="/js/ejercicio-1/">Volver</a>
+  <main>
+    <h1>Ejercicio_1-1</h1>
+    <h2>Suma dos números</h2>
+    <button>Empezar</button>
+    <p id="answer"></p>
+  </main>
+  <script type="text/javascript">
+    const btn = document.querySelector("button");
 
-      btn.addEventListener("click", () => {
-        const primerSumando = parseInt(prompt("Introduzca el primer sumando"));
-        const segundoSumando = parseInt(
-          prompt("Introduzca el segundo sumando")
-        );
-        document.getElementById("answer").innerText = `El resultado es: ${
-          primerSumando + segundoSumando
+    btn.addEventListener("click", () => {
+      const primerSumando = parseInt(prompt("Introduzca el primer sumando"));
+      const segundoSumando = parseInt(
+        prompt("Introduzca el segundo sumando")
+      );
+      document.getElementById("answer").innerText = `El resultado es: ${primerSumando + segundoSumando
         }`;
-      });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
