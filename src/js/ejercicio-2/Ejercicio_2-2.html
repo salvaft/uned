@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    
+<head>
+  <meta charset="utf-8" />
+
+
   <script type="module">
     // El bundler lo organiza en un solo script. Esto es para poder usar el alias
     import "@src/main.js"
   </script>
-</script>
 
-    <title>Ejercicio 2-2</title>
-  </head>
+  <title>Ejercicio 2-2</title>
+</head>
 
-  <body>
-    <a href="/js/ejercicio-2/">Volver</a>
+<body>
+  <a href="/js/ejercicio-2/">Volver</a>
 
-    <main>
-      <h1>Ejercicio_2-2</h1>
-      <p>
-        Los números múltiplos de 5 entre 1490 y 1600 (de mayor a menor y ambos
-        incluidos) son:
-      </p>
+  <main>
+    <h1>Ejercicio_2-2</h1>
+    <p>
+      Los números múltiplos de 5 entre 1490 y 1600 (de mayor a menor y ambos
+      incluidos) son:
+    </p>
 
-      <div id="comentario"></div>
-    </main>
+    <div id="comentario"></div>
+  </main>
 
-    <script type="text/javascript">
-      // Generar la cadena de texto con toda la lista de multiplos y almacenarla en la variable lista_numeros
-      let lista_numeros = [];
-      for (let i = 0; i * 5 + 1600 >= 1490; i--) {
-        lista_numeros.push(i * 5 + 1600);
-      }
+  <script type="text/javascript">
+    // Generar la cadena de texto con toda la lista de multiplos y almacenarla en la variable lista_numeros
+    let lista_numeros = [];
+    for (let i = 0; i * 5 + 1600 >= 1490; i--) {
+      lista_numeros.push(i * 5 + 1600);
+    }
 
-      //Escribir la cadena de texto en el contendor <div> identificado con el ID "comentario"
-      document.getElementById("comentario").innerHTML = lista_numeros;
-    </script>
-  </body>
+    //Escribir la cadena de texto en el contendor <div> identificado con el ID "comentario"
+    document.getElementById("comentario").innerHTML = lista_numeros;
+  </script>
+</body>
+
 </html>
