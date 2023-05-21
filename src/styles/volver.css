@@ -1,9 +1,13 @@
     #volver {
+      display: block !important;
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.3);
         width: fit-content;
         padding: 1rem;
         border-radius: 0.5rem;
         bottom: 1rem;
         left: 1rem;
+      & :visited{
+        color:white;
+      }
     }

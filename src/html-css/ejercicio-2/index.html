@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../../styles/volver.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1>XML</h1>
-      <p>
-        <strong>XML</strong> son las siglas de
-        <i>Extensible Markup Language</i>, que es un lenguaje de marcado que
-        define un conjunto de reglas para la codificación de documento
-      </p>
-      <p>
-        El lenguaje <strong>XML</strong> se emplea para múltiples servicios
-        webs. Puede editarse con cualquier navegador y existen distintos
-        formatos estándares sujetos a este formato. Su máxima utilización está
-        en el uso de API de comunicación entre dos aplicaciones que intercambian
-        mensajes entre sí.
-      </p>
-      <p>
-        <strong>XML</strong> se compone de etiquetas que se escriben entre los
-        símbolos menor que y mayor que.
-      </p>
-    </header>
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <main>
-      <section id="history">
-        <h1>Historia de XML</h1>
-        <p>
-          Los inicios del lenguaje <strong>XML</strong> se lleva a cabo con una
-          declaración de documento <strong>XML</strong> fue creado por el
-          <i>Word Wide Consortium</i> para permitir la interoperabilidad entre
-          máquinas <i>M2M o B2B</i> que indica como se organiza el documento. se
-          remontan con lal año 1990, cuando
-          <i>Tim Berners-Lee</i>
-          creó la primera página web.
-        </p>
-        <img id="logo" src="xml.webp" alt="xml-logo" />
-      </section>
-      <section id="format">
-        <h1><strong>Formato RDF</strong></h1>
-        <p>W3C Definio RDF Como Uno De Formatos XML Para Uso Extendido</p>
-      </section>
-    </main>
-    <footer>
-      <i>&copy; Aprendiendo HTML basico</i>
-    </footer>
-  </body>
-  <div id="volver">
-    <a href="/">Volver</a>
-  </div>
+<script type="module">
+  const sideEffects = async () => {
+    // import module for side effects
+    // De esta manera el boton de volver me aparece a mi solo en desarrollo. En el bundling se pasa a un link de css
+    try {
+      await import("@src/styles/volver.css");
+    } catch {
+      document.getElementById("volver").style.display = "none";
+    }
+  }
+  sideEffects();
+</script>
+
+<body>
+  <header>
+    <h1>XML</h1>
+    <p>
+      <strong>XML</strong> son las siglas de
+      <i>Extensible Markup Language</i>, que es un lenguaje de marcado que
+      define un conjunto de reglas para la codificación de documento
+    </p>
+    <p>
+      El lenguaje <strong>XML</strong> se emplea para múltiples servicios
+      webs. Puede editarse con cualquier navegador y existen distintos
+      formatos estándares sujetos a este formato. Su máxima utilización está
+      en el uso de API de comunicación entre dos aplicaciones que intercambian
+      mensajes entre sí.
+    </p>
+    <p>
+      <strong>XML</strong> se compone de etiquetas que se escriben entre los
+      símbolos menor que y mayor que.
+    </p>
+  </header>
+
+  <main>
+    <section id="history">
+      <h1>Historia de XML</h1>
+      <p>
+        Los inicios del lenguaje <strong>XML</strong> se lleva a cabo con una
+        declaración de documento <strong>XML</strong> fue creado por el
+        <i>Word Wide Consortium</i> para permitir la interoperabilidad entre
+        máquinas <i>M2M o B2B</i> que indica como se organiza el documento. se
+        remontan con lal año 1990, cuando
+        <i>Tim Berners-Lee</i>
+        creó la primera página web.
+      </p>
+      <img id="logo" src="xml.webp" alt="xml-logo" />
+    </section>
+    <section id="format">
+      <h1><strong>Formato RDF</strong></h1>
+      <p>W3C Definio RDF Como Uno De Formatos XML Para Uso Extendido</p>
+    </section>
+  </main>
+  <footer>
+    <i>&copy; Aprendiendo HTML basico</i>
+  </footer>
+</body>
+<div id="volver">
+  <a href="/">Volver</a>
+</div>
+
 </html>

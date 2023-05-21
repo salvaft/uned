@@ -6,11 +6,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="../../../styles/volver.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+  <script type="module">
+    // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
+    // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
+    // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
+    // Lo hago de esta manera con un script tag para poder usar el alias @src
+    import "@src/styles/volver.css"
+  </script>
+  <script type="module">
+    const sideEffects = async () => {
+      // import module for side effects
+      // De esta manera el boton de volver me aparece a mi solo en desarrollo. En el bundling se pasa a un link de css
+      try {
+        await import("@src/styles/volver.css");
+      } catch {
+        document.getElementById("volver").style.display = "none";
+      }
+    }
+    sideEffects();
+  </script>
   <!-- Tailwind es una coleccion de clases de CSS, en las que cada clase cambia una propiedad especifica del elemento. -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -36,9 +54,6 @@
             'claroscuro': "#787878",
             'accent': "#FBE75C"
           },
-          gridAutoRows: {
-            '1fr': '2fr',
-          }
         }
       }
     }
@@ -73,9 +88,9 @@
     </div>
   </nav>
   <!-- Todo el contenido despues de la navbar lo dividido en secciones que son muy parecidas y todas dentro de un main -->
-  <!-- El main le pongo display grid y auto-rows-1fr es lo mismo que grid-auto-rows: 1fr, es decir, que cada fila tiene el mismo tamano -->
-  <!-- Sin embargo esto quiero que pase a partir de md:720px @media (min-width: 720px) {grid-auto-rows: 1fr} -->
-  <main class="md:grid auto-rows-1fr">
+  <!-- El main le pongo display grid -->
+  <!-- Sin embargo esto quiero que pase a partir de md:720px @media (min-width: 720px) {display:grid} -->
+  <main class="md:grid">
 
     <!-- First section -->
     <!-- bg es para el color del fondo -->
@@ -91,7 +106,8 @@
           </div>
           <!-- Aqui ya se van repitiendo la mayoria de las utility classes y comento menos -->
           <div role="group" class="flex flex-col gap-2 items-center">
-            <button class="px-4 py-2 text-lg text-clear rounded-full bg-oscuro">¡Contáctanos!</button>
+            <button
+              class="px-4 py-2 text-lg text-clear rounded-full bg-oscuro hover:bg-accent hover:text-oscuro">¡Contáctanos!</button>
             <p class="text-lg"><span>¡Coge cita sin </span><br>compromiso!</p>
           </div>
 
@@ -179,6 +195,53 @@
         </div>
       </div>
     </section>
+    <section class="bg-oscuro text-clear p-16">
+      <div style="grid-template-columns: auto auto auto;"
+        class="container h-full w-full flex flex-col gap-6  md:grid md:gap-16 place-content-center">
+        <ul class="relative flex flex-col gap-4">
+
+          <h1 class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent">Sobre
+          </h1>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Conócenos</a>
+          </li>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Noticias</a>
+          </li>
+        </ul>
+        <ul class="relative flex flex-col gap-4">
+
+          <h1 class=" relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent">Contacto
+          </h1>
+          <li class=" text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Email</a>
+          </li>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Instagram</a>
+          </li>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Facebook</a>
+          </li>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Twitter</a>
+          </li>
+        </ul>
+        <ul class="relative flex flex-col gap-4">
+
+          <h1 class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent">Localización
+          </h1>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Madrid</a>
+          </li>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Francia</a>
+          </li>
+          <li class="text-lg text-justify font-outfit">
+            <a class="hover:text-accent" href="#">Suiza</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
   <footer class=" p-4 bg-oscuro text-claroscuro">
     <div class="sm:container flex-col lg:flex-row flex justify-between items-center">
@@ -209,5 +272,9 @@
     </div>
   </footer>
 </body>
+
+<div id="volver">
+  <a href="/">Volver</a>
+</div>
 
 </html>
