@@ -1,8 +1,6 @@
 const postcssJitProps = require("postcss-jit-props");
 const postcssPresetEnv = require("postcss-preset-env");
 const OpenProps = require("open-props");
-// const postcssCustomMedia = require("postcss-custom-media");
-// const nested = require("postcss-nested");
 
 module.exports = {
   plugins: [
