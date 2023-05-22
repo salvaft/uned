@@ -25,6 +25,9 @@ pnpm-debug.log*
 **/*.PNG
 **/*.jpg
 **/*.jpeg
+**/*.JPG
+# Figma files
+**/*.fig
 
 # zipfiles
 **/*.zip
