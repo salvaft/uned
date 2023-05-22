@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "dev": "vite",
-    "build": "vite build --emptyOutDir && npm run build --prefix /home/sft/git-projects/uned/src/fwjs/ejercicio-1/",
+    "build": "vite build --emptyOutDir && npm run build --prefix ./src/fwjs/ejercicio-1/",
     "preview": "vite preview"
   },
   "keywords": [],
