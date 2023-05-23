@@ -18,13 +18,9 @@ submit-html-6: EJERCICIO := 6
 submit-html-6: EJERCICIO_DIR := ejercicio
 submit-html-6: ALUMNO := ferradas_troitino_salvador
 submit-html-6: MODULE := html-css
-submit-html-6: SOURCEDIR := ./src/$(MODULE)/$(EJERCICIO_DIR)-$(EJERCICIO)
+submit-html-6: BASEDIR := ./src/$(MODULE)
+submit-html-6: FOLDER := $(EJERCICIO_DIR)-$(EJERCICIO)
 submit-html-6: ZIPNAME :=$(MODULE)_$(EJERCICIO)_$(ALUMNO)
 submit-html-6:
-	tar  --exclude='*.PNG' --exclude='*.png' --exclude='*.fig' --exclude='*.jpg' -zcvf ./$(ZIPNAME).tar.gz $(SOURCEDIR)
-
-
-
-	
-
+	tar  --exclude='*.PNG' --exclude='*.png' --exclude='*.fig' --exclude='*.jpg' -zcvf ./$(ZIPNAME).tar.gz -C $(BASEDIR) $(FOLDER)
 

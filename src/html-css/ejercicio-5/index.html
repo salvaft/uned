@@ -20,7 +20,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Una coleccion de variables CSS listas para usar. Muy chulo y 100% nativo https://open-props.style/ -->
-  <link rel="stylesheet" href="https://unpkg.com/open-props" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/open-props" /> -->
   <!--Adjunto dos archivos CSS porque en el primero me permito usar la feature experimental de CSS anidado que solo funciona en Chrome -->
   <link rel="stylesheet" href="./styles/styles.css" />
 
@@ -29,10 +29,10 @@
 
 <script type="module">
   // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-// (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-// Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-// Lo hago de esta manera con un script tag para poder usar el alias @src
-import "@src/styles/volver.css"
+  // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
+  // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
+  // Lo hago de esta manera con un script tag para poder usar el alias @src
+  import "@src/styles/volver.css"
 </script>
 
 <body>

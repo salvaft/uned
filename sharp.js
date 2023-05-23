@@ -7,15 +7,18 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const exerciseImgs = glob.sync("./src/html-css/ejercicio-6/**/*.jpg");
+const extension = "PNG"
+const exerciseImgs = glob.sync(`./src/html-css/ejercicio-6/**/*.${extension}`);
+const alreadyTransformed = glob.sync(`./src/html-css/ejercicio-6/**/*.webp`);
 
-// exerciseImgs.forEach((img) => {
-//   const newName = img.replace("jpg", "webp");
-//   console.log("Starting to process: ", img);
-//   sharp(img)
-//     .toFile(newName)
-//     .then(() => {
-//       // fs.copyFileSync(newName, newName.replace("js/ejercicio-04", "public"));
-//       console.log("Done with: ", newName);
-//     });
-// });
+exerciseImgs.forEach((img) => {
+  const newName = img.replace(`${extension}`, "webp");
+  if (alreadyTransformed.includes(newName)) return;
+  console.log("Starting to process: ", img);
+  sharp(img)
+    .toFile(newName)
+  //     .then(() => {
+  //       // fs.copyFileSync(newName, newName.replace("js/ejercicio-04", "public"));
+  //       console.log("Done with: ", newName);
+  //     });
+});
