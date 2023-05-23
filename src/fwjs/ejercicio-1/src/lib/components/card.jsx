@@ -6,13 +6,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard({ text, title }) {
+export default function MediaCard({ text, title, poster }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="https://placehold.co/200x400"
-        title="green iguana"
+        sx={{ height: 330, width: 220 }}
+        image={`https://image.tmdb.org/t/p/w220_and_h330_face/${poster}`}
+        title={title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
