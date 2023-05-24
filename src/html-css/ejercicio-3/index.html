@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarea con listas</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
-<script type="module">
-  // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-// (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-// Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-// Lo hago de esta manera con un script tag para poder usar el alias @src
-import "@src/styles/volver.css"
-</script>
-
-<body>
-  <h1>Usando solamente CSS</h1>
-  <ul id="first">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    <li>Item 6</li>
-    <li>Item 7</li>
-    <li>Item 8</li>
-    <li>Item 9</li>
-  </ul>
-  <h1>Usando clases</h1>
-  <ul>
-    <li class="first-half">Item 1</li>
-    <li class="first-half">Item 2</li>
-    <li class="first-half">Item 3</li>
-    <li class="first-half">Item 4</li>
-    <li class="middle">Item 5</li>
-    <li class="second-half">Item 6</li>
-    <li class="second-half">Item 7</li>
-    <li class="second-half">Item 8</li>
-    <li class="second-half">Item 9</li>
-  </ul>
-  <h1>Usando clases lista mas larga</h1>
-  <ul>
-    <li class="first-half">Item 1</li>
-    <li class="first-half">Item 2</li>
-    <li class="first-half">Item 3</li>
-    <li class="first-half">Item 4</li>
-    <li class="first-half">Item 4</li>
-    <li class="first-half">Item 4</li>
-    <li class="middle">Item 5</li>
-    <li class="second-half">Item 6</li>
-    <li class="second-half">Item 7</li>
-    <li class="second-half">Item 8</li>
-    <li class="second-half">Item 9</li>
-    <li class="second-half">Item 9</li>
-    <li class="second-half">Item 9</li>
-  </ul>
-</body>
-<div id="volver">
-  <a href="/">Volver</a>
-</div>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea con listas</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <script type="module">
+    // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
+    // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
+    // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
+    // Lo hago de esta manera con un script tag para poder usar el alias @src
+    import "@src/styles/volver.css"
+  </script>
+  <body>
+    <h1>Usando solamente CSS</h1>
+    <ul id="first">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+    </ul>
+    <h1>Usando clases</h1>
+    <ul>
+      <li class="first-half">Item 1</li>
+      <li class="first-half">Item 2</li>
+      <li class="first-half">Item 3</li>
+      <li class="first-half">Item 4</li>
+      <li class="middle">Item 5</li>
+      <li class="second-half">Item 6</li>
+      <li class="second-half">Item 7</li>
+      <li class="second-half">Item 8</li>
+      <li class="second-half">Item 9</li>
+    </ul>
+    <h1>Usando clases lista mas larga</h1>
+    <ul>
+      <li class="first-half">Item 1</li>
+      <li class="first-half">Item 2</li>
+      <li class="first-half">Item 3</li>
+      <li class="first-half">Item 4</li>
+      <li class="first-half">Item 4</li>
+      <li class="first-half">Item 4</li>
+      <li class="middle">Item 5</li>
+      <li class="second-half">Item 6</li>
+      <li class="second-half">Item 7</li>
+      <li class="second-half">Item 8</li>
+      <li class="second-half">Item 9</li>
+      <li class="second-half">Item 9</li>
+      <li class="second-half">Item 9</li>
+    </ul>
+  </body>
+  <div id="volver">
+    <a href="/">Volver</a>
+  </div>
 </html>

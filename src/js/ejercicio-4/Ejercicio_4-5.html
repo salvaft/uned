@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <title>Ejercicio 4-5: calculo DNI</title>
-  <script type="module" src="js/Ejercicio_4-5.js" defer></script>
-  <!-- El main es para el entry point del bundler -->
-
-  <script type="module">
-    // El bundler lo organiza en un solo script. Esto es para poder usar el alias
-    import "@src/main.js"
-
-  </script>
-</head>
-
-<body>
-  <a href="/js/ejercicio-04/">Volver</a>
-
-  <main><section>
-    <h2>Cálculo de la letra del DNI</h2>
-    <br />
-    <form name="DNI" id="form--dni">
-      DNI: <input id="dni" type="text" size="20" /><br /><br />
-      <input type="submit" value="Calcula la letra" />
-    </form>
-  </section></main>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 4-5: calculo DNI</title>
+    <script type="module" src="js/Ejercicio_4-5.js" defer></script>
+    <!-- El main es para el entry point del bundler -->
+    <script type="module">
+      // El bundler lo organiza en un solo script. Esto es para poder usar el alias
+      import "@src/main.js"
+    </script>
+  </head>
+  <body>
+    <a href="/js/ejercicio-04/">Volver</a>
+    <main>
+      <section>
+        <h2>Cálculo de la letra del DNI</h2>
+        <br />
+        <form name="DNI" id="form--dni">
+          DNI: <input id="dni" type="text" size="20" /><br />
+          <br />
+          <input type="submit" value="Calcula la letra" />
+        </form>
+      </section>
+    </main>
+  </body>
 </html>

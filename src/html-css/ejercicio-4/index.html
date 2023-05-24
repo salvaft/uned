@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles/styles.css" />
-  <link rel="stylesheet" href="./styles/envio.css" />
-
-  <title>Trabajo con formularios</title>
-</head>
-<script type="module">
-  // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-// (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-// Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-// Lo hago de esta manera con un script tag para poder usar el alias @src
-import "@src/styles/volver.css"
-</script>
-
-<body>
-  <form class="form-control">
-    <!-- La division .half hace de container flex para que sus 2 elementos interiores queden posicionados a ambos lados -->
-    <div class="half">
-      <!-- No poner label es una mala practica para accesibilidad. La he escondido siguiendo https://www.w3.org/WAI/tutorials/forms/labels/#hiding-label-text en lugar de hacer hidden porque algunos browsers se ven afectados en accesibilidad -->
-      <label for="name" class="visuallyHidden">Nombre</label>
-      <input placeholder="Nombre*" required="true" name="name" id="name" type="text" />
-      <label for="lastname" class="visuallyHidden">Apellidos</label>
-      <input placeholder="Apellidos*" required="true" name="lastname" id="lastname" type="text" />
-    </div>
-    <label for="address" hidden>Direccion</label>
-    <input placeholder="Dirección*" required="true" name="address" id="address" type="text" />
-    <div class="half">
-      <label for="cp" class="visuallyHidden">Codigo postal</label>
-      <input placeholder="CP*" required="true" name="cp" id="cp" type="number" />
-      <label for="country">País: </label>
-      <select name="country" id="country">
-        <option value="spain">España</option>
-        <option value="france">Francia</option>
-        <option value="england">Inglaterra</option>
-        <option value="suisse">Suíza</option>
-      </select>
-    </div>
-    <div class="half">
-      <!-- La division .envio hace que la parte izquierda de half este ordenada con una separacion consistente (flex gap) y crear un nuevo stack context -->
-      <div class="envio">
-        <h3>Método de envío</h3>
-        <!-- La division .envio-option agrupa el label y el radio button. La principal mision es hacer un display flex para que el outline se ajuste al tamaño del contenido en vez de al mas grande (por el flex container exterior .envio) -->
-        <div class="envio-option">
-          <input type="radio" name="envio" id="basic" />
-          <label for="basic">Básico</label>
-        </div>
-        <div class="envio-option">
-          <input type="radio" name="envio" id="fast" />
-          <label for="fast">Inmediato</label>
-        </div>
-        <div class="envio-option">
-          <input type="radio" name="envio" id="pickup" />
-          <label for="pickup">Recogida</label>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/envio.css" />
+    <title>Trabajo con formularios</title>
+  </head>
+  <script type="module">
+    // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
+    // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
+    // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
+    // Lo hago de esta manera con un script tag para poder usar el alias @src
+    import "@src/styles/volver.css"
+  </script>
+  <body>
+    <form class="form-control">
+      <!-- La division .half hace de container flex para que sus 2 elementos interiores queden posicionados a ambos lados -->
+      <div class="half">
+        <!-- No poner label es una mala practica para accesibilidad. La he escondido siguiendo https://www.w3.org/WAI/tutorials/forms/labels/#hiding-label-text en lugar de hacer hidden porque algunos browsers se ven afectados en accesibilidad -->
+        <label for="name" class="visuallyHidden">Nombre</label>
+        <input placeholder="Nombre*" required="true" name="name" id="name" type="text" />
+        <label for="lastname" class="visuallyHidden">Apellidos</label>
+        <input placeholder="Apellidos*" required="true" name="lastname" id="lastname" type="text" />
       </div>
-      <p><span style="color: tomato">*</span> - Requeridos</p>
-    </div>
-    <button type="submit">Enviar</button>
-  </form>
-</body>
-<div id="volver">
-  <a href="/">Volver</a>
-</div>
-
+      <label for="address" hidden>Direccion</label>
+      <input placeholder="Dirección*" required="true" name="address" id="address" type="text" />
+      <div class="half">
+        <label for="cp" class="visuallyHidden">Codigo postal</label>
+        <input placeholder="CP*" required="true" name="cp" id="cp" type="number" />
+        <label for="country">País: </label>
+        <select name="country" id="country">
+          <option value="spain">España</option>
+          <option value="france">Francia</option>
+          <option value="england">Inglaterra</option>
+          <option value="suisse">Suíza</option>
+        </select>
+      </div>
+      <div class="half">
+        <!-- La division .envio hace que la parte izquierda de half este ordenada con una separacion consistente (flex gap) y crear un nuevo stack context -->
+        <div class="envio">
+          <h3>Método de envío</h3>
+          <!-- La division .envio-option agrupa el label y el radio button. La principal mision es hacer un display flex para que el outline se ajuste al tamaño del contenido en vez de al mas grande (por el flex container exterior .envio) -->
+          <div class="envio-option">
+            <input type="radio" name="envio" id="basic" />
+            <label for="basic">Básico</label>
+          </div>
+          <div class="envio-option">
+            <input type="radio" name="envio" id="fast" />
+            <label for="fast">Inmediato</label>
+          </div>
+          <div class="envio-option">
+            <input type="radio" name="envio" id="pickup" />
+            <label for="pickup">Recogida</label>
+          </div>
+        </div>
+        <p><span style="color: tomato">*</span> - Requeridos</p>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+  <div id="volver">
+    <a href="/">Volver</a>
+  </div>
 </html>

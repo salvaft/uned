@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <script defer type="module" src="./js/Ejercicio_3-2.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Ejercicio 3-2: Calculos matemáticos</title>
-
-
-  <script type="module">
-    // El bundler lo organiza en un solo script. Esto es para poder usar el alias
-    import "@src/main.js"
-  </script>
-</head>
-
-<body>
-  <a href="/js/ejercicio-3/">Volver</a>
-
-  <main><section>
-    <h1>Ejercicio_3-2</h1>
-    <section class="s1">
-      <h2>Cálculo del factorial:</h2>
-      <form name="fomulario1" action="none">
-        Número: <input type="number" id="num1" size="20" />
-        El factorial es:
-        <input disabled type="text" id="resultado" size="20" readonly />
-        <button id="btn-fact" type="submit">Calcula factorial</button>
-      </form>
-    </section>
-    <section class="s2">
-      <h2>Conversión de grados centigrados a grados Fahrenheit:</h2>
-      <form name="fomulario2">
-        Introduce grados centigrados:
-        <input required type="float" id="idCentigrados" size="20" />
-        Conversión a grados Fahrenheit:
-        <input disabled type="text" id="idFahrenheit" size="20" readonly />
-        <button type="submit" id="btn-fahren">Calcula Fahrenheit</button>
-      </form>
-    </section>
-  </section></main>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <script defer type="module" src="./js/Ejercicio_3-2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejercicio 3-2: Calculos matemáticos</title>
+    <script type="module">
+      // El bundler lo organiza en un solo script. Esto es para poder usar el alias
+      import "@src/main.js"
+    </script>
+  </head>
+  <body>
+    <a href="/js/ejercicio-3/">Volver</a>
+    <main>
+      <section>
+        <h1>Ejercicio_3-2</h1>
+        <section class="s1">
+          <h2>Cálculo del factorial:</h2>
+          <form name="fomulario1" action="none">
+            Número: <input type="number" id="num1" size="20" />
+            El factorial es:
+            <input disabled type="text" id="resultado" size="20" readonly />
+            <button id="btn-fact" type="submit">Calcula factorial</button>
+          </form>
+        </section>
+        <section class="s2">
+          <h2>Conversión de grados centigrados a grados Fahrenheit:</h2>
+          <form name="fomulario2">
+            Introduce grados centigrados:
+            <input required type="float" id="idCentigrados" size="20" />
+            Conversión a grados Fahrenheit:
+            <input disabled type="text" id="idFahrenheit" size="20" readonly />
+            <button type="submit" id="btn-fahren">Calcula Fahrenheit</button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>
 <style>
   main {
