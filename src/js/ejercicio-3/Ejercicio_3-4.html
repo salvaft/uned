@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Torre de Hanoi</title>
-  <script defer src="./js/Ejercicio_3-4.js" type="module"></script>
-
-
-  <script type="module">
-    // El bundler lo organiza en un solo script. Esto es para poder usar el alias
-    import "@src/main.js"
-
-  </script>
-</head>
-
-<body class="lg">
-  <a href="/js/ejercicio-3/">Volver</a>
-
-  <header>
-    <h1>Torres de Hanoi</h1>
-    <p>
-      Esta aplicacion ayuda a resolver el juego de las
-      <a href="https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i">Torres de Hanoi</a>
-    </p>
-  </header>
-
-  <main>
-    <section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Torre de Hanoi</title>
+    <script defer src="./js/Ejercicio_3-4.js" type="module"></script>
+    <script type="module">
+      // El bundler lo organiza en un solo script. Esto es para poder usar el alias
+      import "@src/main.js"
+    </script>
+  </head>
+  <body class="lg">
+    <a href="/js/ejercicio-3/">Volver</a>
+    <header>
+      <h1>Torres de Hanoi</h1>
       <p>
-        Los tres palos se llaman <strong>A</strong>, <strong>B</strong> y
-        <strong>C</strong>
+        Esta aplicacion ayuda a resolver el juego de las
+        <a href="https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i">Torres de Hanoi</a>
       </p>
-      <p></p>
-      <p>
-        El objetivo es pasar todos los discos al palo <strong>C</strong>. Las
-        normas:<br />
-        Se mueve de uno en uno y no se puede poner un disco mas grande encima
-        de otro mas pequeno
-      </p>
-      <p>
-        El algoritmo esta disponible en
-        <a href="https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i#Mediante_recursividad">Wikipedia</a>
-      </p>
-      <p>Para acabar el juego hay jugar en tres fases:</p>
-      <ul>
-        <li>
-          Mover <strong>n-1</strong> discos de "A" a "B" usando "C" si se
-          necesita
-        </li>
-        <li>Mover el ultimo disco <strong>n</strong> de "A" a "C"</li>
-        <li>
-          Mover <strong>n-1</strong> discos de "B" a "C", usando "A" si se
-          necesita.
-        </li>
-      </ul>
-    </section>
-    <aside>
-      <form name="fomulario">
-        <label for="discos">Numero inicial de discos:</label>
-        <input type="number" name="discos" id="discos" size="20" />
-        <button type="submit" id="btn">Resolver</button>
-        <p class="error" id="error"></p>
-        <div id="solucion"></div>
-      </form>
-    </aside>
-  </main>
-</body>
-
+    </header>
+    <main>
+      <section>
+        <p>
+          Los tres palos se llaman <strong>A</strong>, <strong>B</strong> y
+          <strong>C</strong>
+        </p>
+        <p></p>
+        <p>
+          El objetivo es pasar todos los discos al palo <strong>C</strong>. Las
+          normas:<br />
+          Se mueve de uno en uno y no se puede poner un disco mas grande encima
+          de otro mas pequeno
+        </p>
+        <p>
+          El algoritmo esta disponible en
+          <a href="https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i#Mediante_recursividad">Wikipedia</a>
+        </p>
+        <p>Para acabar el juego hay jugar en tres fases:</p>
+        <ul>
+          <li>
+            Mover <strong>n-1</strong> discos de "A" a "B" usando "C" si se
+            necesita
+          </li>
+          <li>Mover el ultimo disco <strong>n</strong> de "A" a "C"</li>
+          <li>
+            Mover <strong>n-1</strong> discos de "B" a "C", usando "A" si se
+            necesita.
+          </li>
+        </ul>
+      </section>
+      <aside>
+        <form name="fomulario">
+          <label for="discos">Numero inicial de discos:</label>
+          <input type="number" name="discos" id="discos" size="20" />
+          <button type="submit" id="btn">Resolver</button>
+          <p class="error" id="error"></p>
+          <div id="solucion"></div>
+        </form>
+      </aside>
+    </main>
+  </body>
 </html>
-
 <style>
   main {
     grid-template-columns: 1.8fr 1fr;
