@@ -1,17 +1,24 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 
 export default function MediaCard({ movie }) {
   return (
     <Button sx={{ textTransform: "none", textAlign: "left", height: "100%" }}>
-      <Card sx={{ width: 220, display: "flex", flexDirection: "column", height: "100%", justifyContent: "space-between" }}>
+      <Card
+        sx={{
+          width: 220,
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          justifyContent: "space-between",
+        }}
+      >
         <CardMedia
           sx={{ height: 330, width: 220 }}
           image={`https://image.tmdb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
@@ -25,13 +32,13 @@ export default function MediaCard({ movie }) {
           {/*   {text} */}
           {/* </Typography> */}
         </CardContent>
-        <CardActions >
+        <CardActions>
           <Stack direction="row" spacing={10}>
             <Chip label={`${movie.vote_average}`} variant="outlined" />
             <Chip label="Ver más" variant="filled" />
           </Stack>
         </CardActions>
-      </Card >
+      </Card>
     </Button>
   );
 }

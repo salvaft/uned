@@ -6,9 +6,9 @@ function App() {
     <>
       <Nav />
       <main
-        className={`mx-auto grid xl:grid-flow-col justify-around items-stretch w-fit gap-4 my-4`}
+        className={`flex justify-center flex-wrap items-stretch gap-4 my-4`}
       >
-        <Peliculas />
+        <Peliculas qty={4} />
       </main>
     </>
   );

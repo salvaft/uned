@@ -12,9 +12,11 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./routes/error";
 
+// React router > 6.4 style
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
+      {/* Empty layout with index component to have nesting below "/". This allows for a easily set common error page */}
       <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
         <Route index element={<Home />} />
         <Route path=":id" loader={movieLoader} element={<Pelicula />} />

@@ -19,7 +19,8 @@ const bldgs = [
 
 // Preload de imágenes para que el carrusel no de saltos.
 // Lo que hago es guardar el elemento imagen en un array. De esta manera aunque el usuario tenga la cache desactivada, la imagen no se vuelve a descargar.
-const imgs = bldgs.map(([foto, _]) => {
+const imgs = bldgs.map((edificio) => {
+  const foto = edificio[0];
   const preloadedImg = new Image();
   preloadedImg.id = "facultades";
   preloadedImg.src = `/img/${foto}`;

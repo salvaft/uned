@@ -1,3 +1,4 @@
+/* eslint-env node */
 // const postcssJitProps = require("postcss-jit-props");
 // const postcssPresetEnv = require("postcss-preset-env");
 const OpenProps = require("open-props");

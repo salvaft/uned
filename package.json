@@ -11,7 +11,7 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
-    "beautify": "fd --glob '*.html' | xargs htmlbeautify"
+    "beautify": "fd --glob '*.html' | xargs htmlbeautifier"
   },
   "keywords": [],
   "author": "Salvador Ferradás",
