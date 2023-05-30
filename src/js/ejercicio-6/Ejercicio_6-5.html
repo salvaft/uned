@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="js/jquery.skitter.min.js"
+    ></script>
+    <link
+      href="css/skitter.styles.css"
+      type="text/css"
+      media="all"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="js/jquery.easing.1.3.js"
+    ></script>
+    <title>Document</title>
+    <script type="module">
+      // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
+      // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
+      // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
+      // Lo hago de esta manera con un script tag para poder usar el alias @src
+      import "@src/styles/volver.css"
+    </script>
+  </head>
+  <body style="max-width: 1000px; margin-top: 200px; margin-inline: auto">
+    <div class="skitter skitter-large with-dots">
+      <ul>
+        <li>
+          <a href="#cut">
+            <img src="img/fotoGeografiaHistoria.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              GeografiaHistoria
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#cut">
+            <img src="img/fotoDerecho.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              Derecho
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#cut">
+            <img src="img/fotoPsicologia.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              Psicologia
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#cut">
+            <img src="img/fotoFilosofia.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              Filosofia
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#cut">
+            <img src="img/fotoIndustriales130.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              Industriales
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#cut">
+            <img src="img/fotoInformatica.webp" class="cut" />
+          </a>
+          <div class="label_text">
+            <p>
+              Informatica
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBlocks">
+            <img src="img/fotoFilologia.webp" class="swapBlocks" />
+          </a>
+          <div class="label_text">
+            <p>
+              Filologia
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBarsBack">
+            <img src="img/fotoEducacion.webp" class="swapBarsBack" />
+          </a>
+          <div class="label_text">
+            <p>
+              Educacion.webp
+              <a href="#see-more" class="btn btn-xs btn-warning">See more</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="js/Ejercicio_6-5.js"></script>
+    <div id="volver">
+      <a href="/">Volver</a>
+    </div>
+  </body>
+</html>
