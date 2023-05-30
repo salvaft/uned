@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, jquery: true },
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
