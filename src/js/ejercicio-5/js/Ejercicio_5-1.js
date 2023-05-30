@@ -3,14 +3,13 @@
 //
 //
 //
-const img = document.getElementById("img");
+const img = document.getElementById("donald");
 img.addEventListener("click", handleClick);
 img.addEventListener("dblclick", handleDblClick);
 img.addEventListener("mouseover", handleMouseOver);
 img.addEventListener("mouseout", handleMouseOut);
 function handleClick() {
   img.src = "img/Goofi_1.webp";
-  console.log(img);
 }
 function handleDblClick() {
   img.src = "img/Goofi_2.webp";
