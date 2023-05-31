@@ -7,7 +7,7 @@
 document.body.onload = ponfecha;
 
 function escribe(texto) {
-  document.getElementById("cuadro_texto").innerHTML += texto;
+  document.getElementById("cuadro_texto").innerHTML = texto;
 }
 
 function ponfecha() {
@@ -20,11 +20,11 @@ function ponfecha() {
   escribe(
     `Hoy es <b>${weekday}, ${date.getDate()} de ${monthName} de ${date.getFullYear()}</b>`
   );
-  escribe(
-    `Hoy es <b>${weekdayName(
-      weekday
-    )}, ${date.getDate()} de ${monthName} de ${date.getFullYear()}</b>`
-  );
+  // escribe(
+  //   `Hoy es <b>${weekdayName(
+  //     weekday
+  //   )}, ${date.getDate()} de ${monthName} de ${date.getFullYear()}</b>`
+  // );
 }
 
 // Usando un objeto
