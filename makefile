@@ -32,4 +32,8 @@ submit-%:
 	@$(eval FOLDER := $(EJERCICIO_DIR)-$(EJERCICIO))
 	@$(eval ZIPNAME := $(MODULE)_$(EJERCICIO)_$(ALUMNO))
 	@echo "File: $(ZIPNAME).tar.gz"
+	@ZIPNAME=$(ZIPNAME) BASEDIR=$(BASEDIR) FOLDER=$(FOLDER) $(MAKE) $(ZIPNAME).tar.gz
+
+
+$(ZIPNAME).tar.gz:
 	@tar --exclude='*.ts' --exclude='*.PNG' --exclude='*.png' --exclude='*.fig' --exclude='*.jpg' -zcf ./$(ZIPNAME).tar.gz -C $(BASEDIR) $(FOLDER)
