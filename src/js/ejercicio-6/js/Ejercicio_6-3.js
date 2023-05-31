@@ -25,10 +25,10 @@ $(() => {
   for (let heading of $("#preguntas > h2")) {
     $(heading).on("click", () => {
       if ($(heading).next(".answer").is(":hidden")) {
-        $(heading).next(".answer").show();
+        $(heading).next(".answer").slideDown();
         $(heading).children("img").attr("src", "img/close.webp");
       } else {
-        $(heading).next(".answer").hide();
+        $(heading).next(".answer").slideUp();
         $(heading).children("img").attr("src", "img/open.webp");
       }
     });
