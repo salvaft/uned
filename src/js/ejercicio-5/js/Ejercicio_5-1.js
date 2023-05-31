@@ -3,20 +3,15 @@
 //
 //
 //
-const img = document.getElementById("donald");
-img.addEventListener("click", handleClick);
-img.addEventListener("dblclick", handleDblClick);
-img.addEventListener("mouseover", handleMouseOver);
-img.addEventListener("mouseout", handleMouseOut);
-function handleClick() {
+function handleClick(img) {
   img.src = "img/Goofi_1.webp";
 }
-function handleDblClick() {
+function handleDblClick(img) {
   img.src = "img/Goofi_2.webp";
 }
-function handleMouseOver() {
+function handleMouseOver(img) {
   img.src = "img/Donald_2.webp";
 }
-function handleMouseOut() {
+function handleMouseOut(img) {
   img.src = "img/Donald_1.webp";
 }
