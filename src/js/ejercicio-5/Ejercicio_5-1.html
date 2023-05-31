@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Ejercicio 5-1: Eventos</title>
-    <script type="module" src="./js/Ejercicio_5-1.js" defer></script>
+    <script type="module" src="js/Ejercicio_5-1.js"></script>
     <script type="module">
-      // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-      // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-      // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-      // Lo hago de esta manera con un script tag para poder usar el alias @src
-      import "@src/styles/volver.css"
+      import "@src/styles/volver.css";
     </script>
   </head>
   <body bgcolor="orange">
@@ -23,12 +19,14 @@
       <!-- Eventos registrados dentro de la definición del elemento -->
       <img
         id="donald"
-        onmouseover="handleMouseOver(this)" onmouseleave="handleMouseOut(this)"
-            onclick="handleClick(this)" ondblclick="handleDblClick(this)"
+        onmouseover="handleMouseOver(this)"
+        onmouseleave="handleMouseOut(this)"
+        onclick="handleClick(this)"
+        ondblclick="handleDblClick(this)"
         src="img/Donald_1.webp"
       />
     </center>
-    <div id="volver" style="display:none;">
+    <div id="volver" style="display: none">
       <a href="/">Volver</a>
     </div>
   </body>

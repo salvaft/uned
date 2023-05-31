@@ -11,13 +11,9 @@
       media="screen"
     />
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script type="module" src="./js/Ejercicio_6-2.js" defer></script>
+    <script type="module" src="js/Ejercicio_6-2.js" defer></script>
     <script type="module">
-      // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-      // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-      // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-      // Lo hago de esta manera con un script tag para poder usar el alias @src
-      import "@src/styles/volver.css"
+      import "@src/styles/volver.css";
     </script>
   </head>
 
@@ -84,7 +80,7 @@
       </fieldset>
     </form>
   </body>
-    <div id="volver" style="display:none;">
-      <a href="/">Volver</a>
-    </div>
+  <div id="volver" style="display: none">
+    <a href="/">Volver</a>
+  </div>
 </html>

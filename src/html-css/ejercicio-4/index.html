@@ -9,11 +9,7 @@
     <title>Trabajo con formularios</title>
   </head>
   <script type="module">
-    // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-    // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-    // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-    // Lo hago de esta manera con un script tag para poder usar el alias @src
-    import "@src/styles/volver.css"
+    import "@src/styles/volver.css";
   </script>
   <body>
     <form class="form-control">
@@ -21,15 +17,39 @@
       <div class="half">
         <!-- No poner label es una mala practica para accesibilidad. La he escondido siguiendo https://www.w3.org/WAI/tutorials/forms/labels/#hiding-label-text en lugar de hacer hidden porque algunos browsers se ven afectados en accesibilidad -->
         <label for="name" class="visuallyHidden">Nombre</label>
-        <input placeholder="Nombre*" required="true" name="name" id="name" type="text" />
+        <input
+          placeholder="Nombre*"
+          required="true"
+          name="name"
+          id="name"
+          type="text"
+        />
         <label for="lastname" class="visuallyHidden">Apellidos</label>
-        <input placeholder="Apellidos*" required="true" name="lastname" id="lastname" type="text" />
+        <input
+          placeholder="Apellidos*"
+          required="true"
+          name="lastname"
+          id="lastname"
+          type="text"
+        />
       </div>
       <label for="address" hidden>Direccion</label>
-      <input placeholder="Dirección*" required="true" name="address" id="address" type="text" />
+      <input
+        placeholder="Dirección*"
+        required="true"
+        name="address"
+        id="address"
+        type="text"
+      />
       <div class="half">
         <label for="cp" class="visuallyHidden">Codigo postal</label>
-        <input placeholder="CP*" required="true" name="cp" id="cp" type="number" />
+        <input
+          placeholder="CP*"
+          required="true"
+          name="cp"
+          id="cp"
+          type="number"
+        />
         <label for="country">País: </label>
         <select name="country" id="country">
           <option value="spain">España</option>

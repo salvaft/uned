@@ -8,17 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./img/logo.webp" />
     <script type="module">
-      // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-      // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-      // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-      // Lo hago de esta manera con un script tag para poder usar el alias @src ya que estos ejercicios empiezan a estar bastante anidados en el repo
       import "@src/styles/volver.css";
     </script>
-    <!-- Tailwind es una coleccion de clases de CSS, en las que cada clase cambia una propiedad especifica del elemento. -->
+    <!-- Tailwind es una coleccion de clases de CSS, en las que cada clase cambia una
+    propiedad especifica del elemento. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Siguiendo la documentacion de Tailwind, podemos crear una configuracion personalizada, en la que podemos definir que por defecto la clase contenedor centre el contenido (margin-inline-auto) si no me equivoco
@@ -68,7 +71,9 @@
       <!-- Con los break points md, sm, lg, es como se hace el responsive -->
       <!-- El approach es mobile first, de pequeno a grande, entonces lo que pongo sin modificador, es lo que va a tener en cuenta HASTA que encuentre un break point -->
       <!-- Entonces para el nav lo que quiero en mobile es dos filas de navbar (sencillito) y a partir de md720px quiero una osla fila md:flex-row es como @media min-width 640px {flex direction: row}-->
-      <div class="container flex flex-col md:flex-row justify-between items-center">
+      <div
+        class="container flex flex-col md:flex-row justify-between items-center"
+      >
         <!-- Fuente y tamaño de letra -->
         <h1 class="text-8xl font-kristi">Tinti</h1>
         <!-- Otra vez dentro de la lista desordenada, display flex y separacion usando tailwind -->
@@ -99,7 +104,9 @@
       <section class="bg-clear py-4 sm:pb-0 md:pt-0">
         <!-- Dentro de cada seccion quiero dos divisiones (texto e imagen) la imagen la escondo hasta que no hayan 700 y algo px de width (md) entonces pongo que sea 2 columnas iguales 1fr 1fr a partir de 640 con sm:grid-cols-2-->
         <!-- La altura siempre que la division interior ocupe el 100% todas ya que puse que todas las filas eran iguales y unas pueden ser mas grandes que otras -->
-        <div class="container h-full grid md:grid-cols-2 justify-items-center px-8">
+        <div
+          class="container h-full grid md:grid-cols-2 justify-items-center px-8"
+        >
           <div class="flex flex-col gap-8 justify-center items-center">
             <div class="flex flex-col gap-2 items-center">
               <img height="300" width="300" src="img/logo.webp" alt="" />
@@ -107,7 +114,9 @@
             </div>
             <!-- Aqui ya se van repitiendo la mayoria de las utility classes y comento menos -->
             <div role="group" class="flex flex-col gap-2 items-center">
-              <button class="px-4 py-2 text-lg text-clear rounded-full bg-oscuro hover:bg-accent hover:text-oscuro">
+              <button
+                class="px-4 py-2 text-lg text-clear rounded-full bg-oscuro hover:bg-accent hover:text-oscuro"
+              >
                 ¡Contáctanos!
               </button>
               <p class="text-lg">
@@ -118,26 +127,42 @@
           </div>
           <!-- Hidden es display none en tailwind. Basicamente estoy poniendo que la imagen se muestre a partir de 700px en el centro. Y a partir de 1024 (lg) la alinee en el final de la caja -->
           <div class="hidden md:block self-center lg:self-end">
-            <img height="700" width="500" src="./img/pexels-lucas-alves-3611570.webp" alt="" />
+            <img
+              height="700"
+              width="500"
+              src="./img/pexels-lucas-alves-3611570.webp"
+              alt=""
+            />
           </div>
         </div>
       </section>
       <!-- 2nd- section -->
       <section
-      class="relative bg-oscuro text-clear py-6 lg:py-0 lg:after:content-[''] lg:after:absolute lg:after:top-0 lg:after:bottom-2/4 lg:after:left-0 lg:after:w-64 lg:after:bg-left-texture lg:after:bg-no-repeat lg:after:bg-contain">
+        class="relative bg-oscuro text-clear py-6 lg:py-0 lg:after:content-[''] lg:after:absolute lg:after:top-0 lg:after:bottom-2/4 lg:after:left-0 lg:after:w-64 lg:after:bg-left-texture lg:after:bg-no-repeat lg:after:bg-contain"
+      >
         <!-- Para esta seccion aplico los mismos principios que para la primera pero la imagen se vea cuando haya dos columnas a partir de  md -->
-        <div class="sm:container h-full grid md:grid-cols-2 justify-items-center px-8">
+        <div
+          class="sm:container h-full grid md:grid-cols-2 justify-items-center px-8"
+        >
           <!-- La imagen la pongo posicion absoluta para que de la sensacion que este sentada y le pongo que clipee el overflow. esto se ve sobretodo a partir de lg -->
           <div class="overflow-clip">
-            <img class="hidden md:block relative -bottom-24 overflow-clip" height="906" width="450"
-            src="./img/pexels-larissa-wolf-2.webp" alt="" />
+            <img
+              class="hidden md:block relative -bottom-24 overflow-clip"
+              height="906"
+              width="450"
+              src="./img/pexels-larissa-wolf-2.webp"
+              alt=""
+            />
           </div>
           <!-- Se pueden usar utility classes on de fly, por ejemplo aqui pongo el max-width a un valor arbitrario de 65 -->
-          <article class="relative flex flex-col gap-4 justify-self-center justify-center lg:max-w-[65%]">
+          <article
+            class="relative flex flex-col gap-4 justify-self-center justify-center lg:max-w-[65%]"
+          >
             <!-- Esto es para poner una imagen overlay usando pseudo elementos. En tailwind se accede con after: o before: . Se pueden encadenar con -->
             <!-- porjemplo break points -->
             <h1
-            class="font-kristi text-7xl uppercase text-inherit relative after:absolute after:content-[''] after:bg-flor after:top-0 after:w-20 after:h-20 after:right-10 after:opacity-20 2xl:after:opacity-100 after:bg-contain after:bg-no-repeat">
+              class="font-kristi text-7xl uppercase text-inherit relative after:absolute after:content-[''] after:bg-flor after:top-0 after:w-20 after:h-20 after:right-10 after:opacity-20 2xl:after:opacity-100 after:bg-contain after:bg-no-repeat"
+            >
               Asi empezó todo,
               <br />
               <span class="text-stone-950">historia de un comienzo</span>
@@ -157,10 +182,15 @@
       </section>
       <!-- 3rd section -->
       <section class="bg-clear text-oscuro py-6 lg:py-0">
-        <div class="container h-full grid md:grid-cols-2 justify-items-center px-8">
-          <article class="relative flex flex-col gap-4 justify-self-center isolate justify-center lg:max-w-[65%]">
+        <div
+          class="container h-full grid md:grid-cols-2 justify-items-center px-8"
+        >
+          <article
+            class="relative flex flex-col gap-4 justify-self-center isolate justify-center lg:max-w-[65%]"
+          >
             <h1
-            class="relative font-kristi text-7xl text-inherit uppercase after:absolute after:content-[''] after:bg-smili after:top-0 after:w-20 after:h-20 after:right-10 after:-z-10 after:opacity-60 after:bg-contain after:bg-no-repeat">
+              class="relative font-kristi text-7xl text-inherit uppercase after:absolute after:content-[''] after:bg-smili after:top-0 after:w-20 after:h-20 after:right-10 after:-z-10 after:opacity-60 after:bg-contain after:bg-no-repeat"
+            >
               Asi empezó todo,
               <br />
               historia de un comienzo
@@ -177,17 +207,27 @@
             </p>
           </article>
           <div class="overflow-clip">
-            <img class="hidden md:flex relative -bottom-44" height="668" width="500"
-            src="./img/pexels-vova-kras-2726161.webp" alt="" />
+            <img
+              class="hidden md:flex relative -bottom-44"
+              height="668"
+              width="500"
+              src="./img/pexels-vova-kras-2726161.webp"
+              alt=""
+            />
           </div>
         </div>
       </section>
       <section
-      class="relative bg-oscuro text-clear p-16 lg:after:content-[''] lg:after:absolute lg:after:inset-y-0 lg:after:right-0 lg:after:w-44 lg:after:bg-right-texture lg:after:bg-no-repeat lg:after:bg-cover">
-        <div style="grid-template-columns: auto auto auto"
-        class="container h-full w-full flex flex-col gap-6 md:grid md:gap-16 place-content-center">
+        class="relative bg-oscuro text-clear p-16 lg:after:content-[''] lg:after:absolute lg:after:inset-y-0 lg:after:right-0 lg:after:w-44 lg:after:bg-right-texture lg:after:bg-no-repeat lg:after:bg-cover"
+      >
+        <div
+          style="grid-template-columns: auto auto auto"
+          class="container h-full w-full flex flex-col gap-6 md:grid md:gap-16 place-content-center"
+        >
           <ul class="relative flex flex-col gap-4">
-            <h1 class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent">
+            <h1
+              class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent"
+            >
               Sobre
             </h1>
             <li class="text-lg text-justify font-outfit">
@@ -198,7 +238,9 @@
             </li>
           </ul>
           <ul class="relative flex flex-col gap-4">
-            <h1 class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent">
+            <h1
+              class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent"
+            >
               Contacto
             </h1>
             <li class="text-lg text-justify font-outfit">
@@ -215,7 +257,9 @@
             </li>
           </ul>
           <ul class="relative flex flex-col gap-4">
-            <h1 class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent">
+            <h1
+              class="relative font-outfit text-4xl text-inherit uppercase border-b border-b-accent"
+            >
               Localización
             </h1>
             <li class="text-lg text-justify font-outfit">
@@ -232,20 +276,34 @@
       </section>
     </main>
     <footer class="p-4 bg-oscuro text-claroscuro">
-      <div class="sm:container flex-col lg:flex-row flex justify-between items-center">
+      <div
+        class="sm:container flex-col lg:flex-row flex justify-between items-center"
+      >
         <div class="flex justify-start gap-2 items-center">
           <a href=" #" class="text-inherit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 256 256">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
               <path
-              d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
-              </path>
+                d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+              ></path>
             </svg>
           </a>
           <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
               <path
-              d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z">
-              </path>
+                d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
+              ></path>
             </svg>
           </a>
           <p class="lg:text-lg font-outfit font-bold uppercase">

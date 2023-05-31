@@ -6,51 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script type="module" src="js/Ejercicio_6-5.js"></script>
     <title>Document</title>
     <script type="module">
-      // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-      // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-      // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-      // Lo hago de esta manera con un script tag para poder usar el alias @src
-      import "@src/styles/volver.css"
+      import "@src/styles/volver.css";
     </script>
   </head>
   <body style="max-width: 1000px; margin-top: 200px; margin-inline: auto">
-    <div class="carousel" style="max-width: 770px; height: 150px;">
+    <div class="carousel" style="max-width: 770px; height: 150px">
       <div class="carousel-cell">
-        <img src="img/fotoCiencias.webp" width="770px" height="130px">
+        <img src="img/fotoCiencias.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoDerecho.webp" width="770px" height="130px">
+        <img src="img/fotoDerecho.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoEconomicas.webp" width="770px" height="130px">
+        <img src="img/fotoEconomicas.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoEducacion.webp" width="770px" height="130px">
+        <img src="img/fotoEducacion.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoFilologia.webp" width="770px" height="130px">
+        <img src="img/fotoFilologia.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoFilosofia.webp" width="770px" height="130px">
+        <img src="img/fotoFilosofia.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoGeografiaHistoria.webp" width="770px" height="130px">
+        <img
+          src="img/fotoGeografiaHistoria.webp"
+          width="770px"
+          height="130px"
+        />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoIndustriales130.webp" width="770px" height="130px">
+        <img src="img/fotoIndustriales130.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoInformatica.webp" width="770px" height="130px">
+        <img src="img/fotoInformatica.webp" width="770px" height="130px" />
       </div>
       <div class="carousel-cell">
-        <img src="img/fotoPsicologia.webp" width="770px" height="130px">
+        <img src="img/fotoPsicologia.webp" width="770px" height="130px" />
       </div>
     </div>
-    <script type="module" src="./js/Ejercicio_6-5.js"></script>
-    <div id="volver" style="display:none;">
+    <div id="volver" style="display: none">
       <a href="/">Volver</a>
     </div>
   </body>

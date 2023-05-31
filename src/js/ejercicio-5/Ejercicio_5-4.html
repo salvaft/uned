@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Diapositivas y vídeo sincronizados</title>
-    <script type="module" src="./js/Ejercicio_5-4.js" defer></script>
+    <script type="module" src="js/Ejercicio_5-4.js"></script>
+    <script type="module">
+      import "@src/styles/volver.css";
+    </script>
+
     <style type="text/css">
       /*Borde redordeado para la diapositiva  */
       #diapo {
@@ -11,13 +15,6 @@
         border: 1px solid #000000;
       }
     </style>
-    <script type="module">
-      // Estilado del boton de volver.Por defecto tiene display none y no aparece a no ser que se importe este CSS(que solo deberia pasar en desarrollo y despues del bundling porque estoy juntando todos los ejercicios)
-      // (A usted no le deberia aparecer cuando abre la pagina ella sola, pero si un error 404 que se puede ignorar...)
-      // Este import pasa a un archivo.css dentro de un link tag en el proceso de bundling
-      // Lo hago de esta manera con un script tag para poder usar el alias @src
-      import "@src/styles/volver.css"
-    </script>
   </head>
   <body bgcolor="#DDDDDD">
     <div style="text-align: center">
@@ -49,11 +46,11 @@
         Ayuda: http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_video_js_prop
 -->
     <div style="text-align: center">
-      <button id="play" >Reproducir/Pausa</button>
+      <button id="play">Reproducir/Pausa</button>
       Tamaño:
-      <button id="sm" >Pequeño</button>
-      <button id="lg" >Grande</button>
-      <button id="normal" >Normal</button>
+      <button id="sm">Pequeño</button>
+      <button id="lg">Grande</button>
+      <button id="normal">Normal</button>
     </div>
     <!-- Mensaje con el instante de reproducción -->
     <div style="text-align: center">
@@ -62,9 +59,9 @@
     <!-- Imagen sincronizada con el video: su contenido depende del instante de reproducción del video -->
     <div style="text-align: center">
       <h3>Diapositiva relacionada con el punto de reproducción</h3>
-      <img id="diapo" src="img/Imagen01_000.webp" />
+      <img id="diapo" src="img/ImagenInicial.webp" />
     </div>
-    <div id="volver" style="display:none;">
+    <div id="volver" style="display: none">
       <a href="/">Volver</a>
     </div>
   </body>
