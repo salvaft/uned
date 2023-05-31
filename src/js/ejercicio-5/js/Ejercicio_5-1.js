@@ -15,10 +15,10 @@ function handleDblClick(img) {
   img.src = Goofi_2;
 }
 function handleMouseOver(img) {
-  img.src = Donald_1;
+  img.src = Donald_2;
 }
 function handleMouseOut(img) {
-  img.src = Donald_2;
+  img.src = Donald_1;
 }
 
 // Prevent bundler treeshaking

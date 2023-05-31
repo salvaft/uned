@@ -17,10 +17,10 @@ function registraEventos() {
     img.src = Goofi_2;
   }
   function handleMouseOver() {
-    img.src = Donald_1;
+    img.src = Donald_2;
   }
   function handleMouseOut() {
-    img.src = Donald_2;
+    img.src = Donald_1;
   }
   const img = document.getElementById("donald");
   const eventsAndListeners = {
