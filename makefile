@@ -11,7 +11,7 @@
 # 	The path should be src/<module>/<exercise>
 
 
-.PHONY: submit-%
+.PHONY: submit-% $(ZIPNAME).tar.gz
 
 ALLOWED_MODULES := html js
 
@@ -28,7 +28,7 @@ submit-%:
 	@$(if $(findstring $(MODULE),$(ALLOWED_MODULES)), , $(error Variable $(MODULE) $(PLACEHOLDER) does not match any allowed value. Stopping execution.))
 	@$(eval MODULE := $(if $(filter $(MODULE), "html"), "html-css", $(MODULE)))
 	@echo "MODULE: $(MODULE)"
-	@$(eval BASEDIR := src/$(MODULE))
+	@$(eval BASEDIR := src/$(MODULE)/)
 	@$(eval FOLDER := $(EJERCICIO_DIR)-$(EJERCICIO))
 	@$(eval ZIPNAME := $(MODULE)_$(EJERCICIO)_$(ALUMNO))
 	@echo "File: $(ZIPNAME).tar.gz"
@@ -37,3 +37,6 @@ submit-%:
 
 $(ZIPNAME).tar.gz:
 	@tar --exclude='*.ts' --exclude='*.PNG' --exclude='*.png' --exclude='*.fig' --exclude='*.jpg' -zcf ./$(ZIPNAME).tar.gz -C $(BASEDIR) $(FOLDER)
+
+
+
