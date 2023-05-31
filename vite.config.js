@@ -20,6 +20,7 @@ export default defineConfig({
   build: {
     outDir: path.join(__dirname, "dist"),
     assetsInlineLimit: 0,
+    modulePreload: false,
     rollupOptions: {
       input: glob.sync(path.resolve(__dirname, "src/**/*.html")),
     },
