@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
     "dev": "vite",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "build": "vite build --emptyOutDir",
@@ -26,8 +25,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "glob": "^10.1.0",
-    "gulp": "^4.0.2",
-    "gulp-zip": "^5.1.0",
     "open-props": "^1.5.7",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
