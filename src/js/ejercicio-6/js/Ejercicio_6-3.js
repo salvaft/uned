@@ -1,5 +1,7 @@
 "use strict";
 // JavaScript Document
+import open from "../img/open.webp";
+import close from "../img/close.webp";
 $(() => {
   $(".answer").hide();
   // Using vanilla js
@@ -26,10 +28,10 @@ $(() => {
     $(heading).on("click", () => {
       if ($(heading).next(".answer").is(":hidden")) {
         $(heading).next(".answer").slideDown();
-        $(heading).children("img").attr("src", "img/close.webp");
+        $(heading).children("img").attr("src", close);
       } else {
         $(heading).next(".answer").slideUp();
-        $(heading).children("img").attr("src", "img/open.webp");
+        $(heading).children("img").attr("src", open);
       }
     });
   }
