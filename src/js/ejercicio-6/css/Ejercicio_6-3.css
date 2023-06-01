@@ -72,6 +72,7 @@ h2 {
   cursor: pointer;
   text-indent: -15px;
 }
+
 /* h2.close { background-image: url(images/close.png);} */
 
 .answer {
@@ -89,10 +90,12 @@ ol,
 ul {
   list-style: yes;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -100,10 +103,12 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /* end reset*/
 
 /* @font-face @/
@@ -303,7 +308,7 @@ fieldset {
   font-family: "ColaborateLightRegular", Arial, sans-serif;
   font-size: 12px;
   color: rgb(255, 255, 255);
-  text-decoration: none;
+
   -moz-border-radius: 0.25em;
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
@@ -377,7 +382,7 @@ fieldset {
   margin-top: 8px;
 }
 
-.resourceList > li {
+.resourceList>li {
   display: inline-block;
   padding: 0.5em 1em;
   -moz-border-radius: 0.25em;
@@ -392,15 +397,18 @@ fieldset {
 #resources ul {
   margin: 5px 0 0 0;
 }
+
 a {
   color: rgba(255, 255, 255, 0.75);
 }
+
 h2 {
   color: rgb(143, 180, 255);
   margin-bottom: 5px;
   font-size: 22px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
 }
+
 h3 {
   font-size: 18px;
   color: rgb(227, 198, 133);
@@ -426,6 +434,7 @@ code {
   font-family: "ColaborateRegular", Arial, sans-serif;
   color: rgb(227, 198, 133);
 }
+
 .results .found {
   color: rgb(255, 0, 0);
 }
@@ -434,12 +443,15 @@ code {
   display: inline-block;
   width: 45%;
 }
+
 .results h2 {
   color: rgba(255, 255, 255, 1);
 }
+
 .results div {
   padding-bottom: 10px;
 }
+
 .results div code {
   float: right;
   width: 60%;
@@ -448,26 +460,32 @@ code {
 input {
   font-size: 20px;
 }
+
 .found {
   color: rgba(255, 0, 0, 1);
 }
+
 form .wide {
   font-size: 18px;
   width: 100%;
 }
+
 .resultSection {
   float: right;
   width: 45%;
   margin-left: 20px;
 }
+
 #regexTester {
   margin-right: 55%;
 }
+
 .sideBySide li {
   float: left;
   overflow: hidden;
   width: 220px;
 }
+
 .clickable {
   cursor: pointer;
   margin-bottom: 5px;
@@ -485,6 +503,7 @@ form .wide {
   border: 1px solid white;
   z-index: 100;
 }
+
 .badge {
   position: absolute;
   margin-top: -10px;
@@ -504,6 +523,7 @@ form .wide {
   float: left;
   width: 75%;
 }
+
 .col2 {
   float: right;
   width: 20%;
@@ -513,6 +533,7 @@ form .wide {
   margin-left: 20px;
   list-style: square;
 }
+
 .col2 li {
   font-size: 90%;
 }
@@ -520,9 +541,11 @@ form .wide {
 #selectorList {
   overflow: hidden;
 }
+
 #selector {
   width: 275px;
 }
+
 #bib {
   padding: 15px;
   border: 1px dotted #fff;
@@ -583,18 +606,22 @@ form .indent,
 #submit {
   margin-left: 215px;
 }
+
 #console label {
   float: left;
   width: 100px;
 }
+
 .clearLeft {
   clear: left;
 }
+
 .imgRight {
   float: right;
   margin-bottom: 5px;
   margin-left: 5px;
 }
+
 .imgLeft {
   float: left;
   margin-bottom: 5px;

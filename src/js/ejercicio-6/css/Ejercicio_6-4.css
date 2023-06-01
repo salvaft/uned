@@ -19,7 +19,7 @@ h1 {
 legend,
 h2 {
 	font-size: 150%;
-	margin: 5px 0; 
+	margin: 5px 0;
 }
 
 h3 {
@@ -41,7 +41,7 @@ p {
 
 a {
 	color: red;
-	text-decoration: none;
+
 }
 
 a:visited {
@@ -156,7 +156,7 @@ body {
 	margin: 0 0 20px 0;
 	overflow: visible;
 	height: 30px;
-	
+
 }
 
 #nav li {
@@ -171,7 +171,7 @@ body {
 	cursor: pointer;
 	width: 120px;
 	text-align: center;
-	
+
 }
 
 #nav li.selected {
@@ -188,7 +188,7 @@ body {
 	top: 50px;
 	left: 0;
 	width: 200px;
-/*	display: none;  Esta linea oculta las opciones del menú */
+	/*	display: none;  Esta linea oculta las opciones del menú */
 	margin: 0;
 }
 
@@ -223,7 +223,8 @@ body {
 	-webkit-border-radius: 8px;
 	padding: 10px;
 	margin: 10px 0 0 0;
-	overflow: hidden;;
+	overflow: hidden;
+	;
 }
 
 #specials div.special img {
@@ -307,7 +308,7 @@ ul li.selected {
 }
 
 #search {
-margin: 15px 0;
+	margin: 15px 0;
 }
 
 /* modal */
@@ -329,5 +330,5 @@ margin: 15px 0;
 	height: 10000px;
 	background-color: #333;
 	z-index: 100;
-	
+
 }

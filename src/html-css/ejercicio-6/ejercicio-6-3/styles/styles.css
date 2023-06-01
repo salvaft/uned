@@ -3,120 +3,128 @@
   --dark-grey: #323230;
   --light-grey: #a8a8a8
 }
+
 * {
- margin: 0; 
+  margin: 0;
   margin-block-end: 0;
-  margin-block-start:0;
-   }
+  margin-block-start: 0;
+}
 
 body {
-    margin: 0;
-    font-family: 'Poppins';
-    padding: 0;
+  margin: 0;
+  font-family: 'Poppins';
+  padding: 0;
 }
 
 /* Al contrario que el ejercicio 6.2, en esta pagina vamos a hacer el desktop first */
 main {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  min-height: 100vh;
 }
+
 /* Navlinks simplemente espaciarlos entre ellos */
-.links{
+.links {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
+
 /* Cada panel tiene su display gruid para ordenar las cosas */
 .panel {
-    display: grid;
-    grid-template-columns: 1fr;
-  max-height:100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-height: 100dvh;
 }
 
 /* El panel de mas a la izquierda es solo una fila en el que ocupen lo mismo. Si cambia el contenido probablemente habria que cambiarlo. Hacer tres filas con auto 1fr auto por ejemplo */
 .panel.welcome {
-    background-color: var(--dark-grey);
-    padding: 30px 60px;
-    grid-auto-rows: 1fr;
+  background-color: var(--dark-grey);
+  padding: 30px 60px;
+  grid-auto-rows: 1fr;
 }
+
 /* Decoracion de la nav */
 .panel.welcome nav a {
-    color: var(--light-grey);
-    text-decoration: none;
-    margin-right: 20px;
+  color: var(--light-grey);
+
+  margin-right: 20px;
 }
 
 /* Decoracion de los links */
 .panel.welcome a {
-    color: var(--light-grey);
-    line-height: 2em;
+  color: var(--light-grey);
+  line-height: 2em;
 }
 
 /* Decoracion del parrafo */
 .panel.welcome p {
-    color: var(--light-grey);
-    max-width: 50ch;
-    line-height: 2rem;
+  color: var(--light-grey);
+  max-width: 50ch;
+  line-height: 2rem;
 }
 
 /* Decoracion del titulo */
 .panel.welcome h1 {
-    color: var(--clear);
-    font-size: 3rem;
+  color: var(--clear);
+  font-size: 3rem;
 }
 
 .panel.welcome footer {
-    align-self: end;
+  align-self: end;
 }
 
 /* Decoracion del texto de los paneles de la derecha */
 .panel .text {
-    background-color: var(--clear);
-    color: var(--dark-grey);
-    padding: 30px 60px;
+  background-color: var(--clear);
+  color: var(--dark-grey);
+  padding: 30px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
 }
+
 /* about panel */
 .panel.about {
   /* La imagen sea 3 veces el texto */
-    grid-template-rows: 3fr 1fr;
+  grid-template-rows: 3fr 1fr;
 
 }
+
 /* El ancho de la imagen quiero que sea el que tiene en la cuadricula y que no expanda la mega resolucion que tiene */
 /* Object fit cover con overflow hidden permite que la imagen se vea sin deformarse casi independiente de las dimensiones del contenedor */
 .panel.about img {
-  object-fit: cover ;
+  object-fit: cover;
   width: 100%;
   overflow: hidden;
 }
 
 .panel.about .text {
-  color:var(--dark-grey);
+  color: var(--dark-grey);
   background-color: white;
 }
+
 /* panel timeline */
 .panel.timeline {
   /* La timeline es 4 veces el parrafo de arriba */
-    grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .panel.timeline .text {
-  color:var(--dark-grey);
+  color: var(--dark-grey);
   background-color: white;
 }
 
 /* timeline component */
 /* Ese me lo traje de internet */
 .timeline-container {
-  max-height:100%;
-  padding-inline:  2rem;
+  max-height: 100%;
+  padding-inline: 2rem;
   padding-top: 1rem;
   background-color: var(--clear);
 }
+
 /* El borde izquierdo del timeline block item hace la linea */
 .timeline-item {
   padding: 2em 1em 1em;
@@ -124,9 +132,11 @@ main {
   color: rgba(0, 0, 0, 0.7);
   border-left: 2px solid rgba(0, 0, 0, 0.3);
 }
+
 .timeline-item p {
   font-size: 1rem;
 }
+
 /* Esto es la fecha de la time line */
 .timeline-item::before {
   /* El content se saca del atributo del html */
@@ -140,6 +150,7 @@ main {
   font-weight: 700;
   font-size: 0.785rem;
 }
+
 /* Esto son los marcadores redondos de la timeline */
 .timeline-item::after {
   width: 10px;
@@ -153,65 +164,71 @@ main {
   border: 2px solid rgba(0, 0, 0, 0.3);
   background: white;
 }
+
 .timeline-item:last-child {
   -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
-     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
 }
 
 
 /* El responsive es lo importante de esta pagina */
 /* Los breakpoints son medio estandares. En 1200 considero que no hace falta. Cogi 680, 960 y 1400 */
 @media screen and (max-width:1400px) {
-    main {
-        grid-template-columns: 1fr 1fr;
-    }
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
   /* El limite de 100dvh lo quiero a partir de esta medida que se ve como una landing en desktop. De 1400 para abajo la disposicion de paneles cambia y me interesa que se vea como necesite. De todas formas al no haber ningun replaced element seguramente lo marque el contenido y si pongo mas cosas en la timeline tendre scroll aun con max-height... */
   .panel {
     max-height: auto;
   }
-    .panel.timeline {
+
+  .panel.timeline {
     /* El timeline ocupe dos columnas, de manera que abarca todo el view width */
-        grid-column: span 2;
+    grid-column: span 2;
     /* Dentro paso a dos columnas en vez de dos filas */
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 
 }
 
 @media screen and (max-width:960px) {
-    main {
+  main {
     /* Solo con una columna */
     /* Podria quitar la regla del specifier de 680px y quizas sea una mala idea pero me gusta ser explicito en las dos media queries... */
-    
-        grid-template-columns: 1fr;
-    /* Hardcodeo los valores para este breakpoint estos van bien. Asi no me tengo que preocupar mucho la imagen. El ultimo panel que ocupe lo que necesite */
-        grid-template-rows: 500px 400px auto;
-    }
 
-    .panel.about {
+    grid-template-columns: 1fr;
+    /* Hardcodeo los valores para este breakpoint estos van bien. Asi no me tengo que preocupar mucho la imagen. El ultimo panel que ocupe lo que necesite */
+    grid-template-rows: 500px 400px auto;
+  }
+
+  .panel.about {
     /* Fuerzo que pase a la segunda fila */
     /* grid-auto-flow podria tener efectos parecidos */
-        grid-row: 2;
+    grid-row: 2;
     /* Imagen y texto interiores mismo ancho y solo una fila */
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 
 }
+
 /* El ultimo breakpoint, el mas pequeno */
 @media screen and (max-width:680px) {
-    main {
-     /* Cada panel ocupe lo que necesite, al contrario que en el desktop, cada uno en una fila y solo una columna */
+  main {
+    /* Cada panel ocupe lo que necesite, al contrario que en el desktop, cada uno en una fila y solo una columna */
     grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-    .panel.about,
-    .panel.timeline {
+    grid-template-rows: auto auto auto;
+  }
+
+  .panel.about,
+  .panel.timeline {
     /* Vuelvo a una columna por panel. Junto con una columna en el main intentamos dar el maximo espacio posible al texto */
-        grid-template-columns: 1fr;
-        border-bottom: 1px solid var(--clear);
-    }
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--clear);
+  }
+
   /* Quito la ultima imagen para el ultimo breakpoint */
   .panel.about img {
     display: none;
