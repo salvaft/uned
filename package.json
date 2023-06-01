@@ -9,6 +9,7 @@
     "dev": "vite",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "build": "vite build --emptyOutDir",
+    "build_gl": "vite build --emptyOutDir --base=/uned/",
     "preview": "vite preview",
     "beautify": "fd --glob '*.html' | xargs htmlbeautifier"
   },
