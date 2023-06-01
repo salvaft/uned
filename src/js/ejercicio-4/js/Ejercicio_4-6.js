@@ -4,17 +4,28 @@ window.addEventListener("load", () => {
   setInterval(cambiarFoto, 2000);
 });
 
+import fotoDerecho from "../img/fotoDerecho.webp";
+import fotoGeografiaHistoria from "../img/fotoGeografiaHistoria.webp";
+import fotoFilosofia from "../img/fotoFilosofia.webp";
+import fotoPsicologia from "../img/fotoPsicologia.webp";
+import fotoIndustriales130 from "../img/fotoIndustriales130.webp";
+import fotoCiencias from "../img/fotoCiencias.webp";
+import fotoEconomicas from "../img/fotoEconomicas.webp";
+import fotoFilologia from "../img/fotoFilologia.webp";
+import fotoEducacion from "../img/fotoEducacion.webp";
+import fotoInformatica from "../img/fotoInformatica.webp";
+
 const bldgs = [
-  ["fotoDerecho.webp", "Facultad de Derecho"],
-  ["fotoGeografiaHistoria.webp", "Facultad de Geografia e Historia"],
-  ["fotoFilosofia.webp", "Facultad de Filosofia"],
-  ["fotoPsicologia.webp", "Facultad de Psicologia"],
-  ["fotoIndustriales130.webp", "Facultad de Industriales"],
-  ["fotoCiencias.webp", "Facultad de Ciencias"],
-  ["fotoEconomicas.webp", "Facultad de Economicas"],
-  ["fotoFilologia.webp", "Facultad de Filologia"],
-  ["fotoEducacion.webp", "Facultad de Educacion"],
-  ["fotoInformatica.webp", "Facultad de Informatica"],
+  [fotoDerecho, "Facultad de Derecho"],
+  [fotoGeografiaHistoria, "Facultad de Geografia e Historia"],
+  [fotoFilosofia, "Facultad de Filosofia"],
+  [fotoPsicologia, "Facultad de Psicologia"],
+  [fotoIndustriales130, "Facultad de Industriales"],
+  [fotoCiencias, "Facultad de Ciencias"],
+  [fotoEconomicas, "Facultad de Economicas"],
+  [fotoFilologia, "Facultad de Filologia"],
+  [fotoEducacion, "Facultad de Educacion"],
+  [fotoInformatica, "Facultad de Informatica"],
 ];
 
 // Preload de imágenes para que el carrusel no de saltos.
@@ -23,7 +34,7 @@ const imgs = bldgs.map((edificio) => {
   const foto = edificio[0];
   const preloadedImg = new Image();
   preloadedImg.id = "facultades";
-  preloadedImg.src = `/img/${foto}`;
+  preloadedImg.src = foto;
   preloadedImg.width = 770;
   preloadedImg.height = 130;
   return preloadedImg;
