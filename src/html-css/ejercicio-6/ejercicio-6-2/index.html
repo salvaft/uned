@@ -17,16 +17,18 @@
       rel="stylesheet"
     />
     <link rel="icon" href="./img/logo.webp" />
-    <script type="module">
-      import "@src/styles/volver.css";
-    </script>
+
     <!-- Tailwind es una coleccion de clases de CSS, en las que cada clase cambia una
     propiedad especifica del elemento. -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <script type="module">
       // Siguiendo la documentacion de Tailwind, podemos crear una configuracion personalizada, en la que podemos definir que por defecto la clase contenedor centre el contenido (margin-inline-auto) si no me equivoco
       // El container principalmente igual que en bootstrap, pone un mismo min y maxwidth a partir de ciertos break points.
       //Aparte de eso container obliga a que el elemento tenga width 100% aunque tenga un display flex por ejemplo
+      import derecha from "./img/derecha.webp";
+      import izquierda from "./img/izquierda.webp";
+      import smili from "./img/smili.webp";
+      import flor from "./img/flor.webp";
 
       tailwind.config = {
         theme: {
@@ -48,10 +50,10 @@
             },
             // Defino background images para usarlos como utility classes despues como por ejemplo bg-flor
             backgroundImage: {
-              "right-texture": "url(/img/derecha.webp)",
-              "left-texture": "url(/img/izquierda.webp)",
-              smili: "url(/img/smili.webp)",
-              flor: "url(/img/flor.webp)",
+              "right-texture": `url(${derecha})`,
+              "left-texture": `url(${izquierda})`,
+              smili: `url(${smili})`,
+              flor: `url(${flor})`,
             },
           },
         },
@@ -316,7 +318,20 @@
       </div>
     </footer>
   </body>
-  <div id="volver" style="display: none">
-    <a href="/">Volver</a>
+  <div
+    id="volver"
+    style="
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.3);
+      width: fit-content;
+      color: white;
+
+      padding: 1rem;
+      border-radius: 0.5rem;
+      bottom: 1rem;
+      left: 1rem;
+    "
+  >
+    <a href="/" style="text-decoration: none; color: white">Volver</a>
   </div>
 </html>

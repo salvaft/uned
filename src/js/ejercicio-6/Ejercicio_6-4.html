@@ -14,9 +14,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script type="module" src="js/Ejercicio_6-4.js" defer></script>
-    <script type="module">
-      import "@src/styles/volver.css";
-    </script>
   </head>
 
   <body>
@@ -82,7 +79,20 @@
         </li>
       </ul>
     </div>
-    <div id="volver" style="display: none">
+    <div
+      id="volver"
+      style="
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: fit-content;
+        color: white;
+
+        padding: 1rem;
+        border-radius: 0.5rem;
+        bottom: 1rem;
+        left: 1rem;
+      "
+    >
       <a href="./">Volver</a>
     </div>
   </body>

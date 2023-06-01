@@ -8,12 +8,22 @@
   </head>
   <body>
     <div id="root"></div>
-    <div id="volver" style="display: none">
-      <a href="/" >Volver</a>
+    <div
+      id="volver"
+      style="
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: fit-content;
+        color: white;
+
+        padding: 1rem;
+        border-radius: 0.5rem;
+        bottom: 1rem;
+        left: 1rem;
+      "
+    >
+      <a href="/" style="text-decoration: none; color: white">Volver</a>
     </div>
     <script type="module" src="src/main.jsx"></script>
-    <script type="module">
-      import "@src/styles/volver.css";
-    </script>
   </body>
 </html>

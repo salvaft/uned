@@ -11,10 +11,8 @@
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
     <script type="module" src="js/Ejercicio_6-5.js"></script>
+
     <title>Document</title>
-    <script type="module">
-      import "@src/styles/volver.css";
-    </script>
   </head>
   <body style="max-width: 1000px; margin-top: 200px; margin-inline: auto">
     <div class="carousel" style="max-width: 770px; height: 150px">
@@ -53,7 +51,20 @@
         <img src="img/fotoPsicologia.webp" width="770px" height="130px" />
       </div>
     </div>
-    <div id="volver" style="display: none">
+    <div
+      id="volver"
+      style="
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: fit-content;
+        color: white;
+
+        padding: 1rem;
+        border-radius: 0.5rem;
+        bottom: 1rem;
+        left: 1rem;
+      "
+    >
       <a href="./">Volver</a>
     </div>
   </body>

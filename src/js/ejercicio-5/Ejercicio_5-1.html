@@ -4,9 +4,6 @@
     <meta charset="utf-8" />
     <title>Ejercicio 5-1: Eventos</title>
     <script type="module" src="js/Ejercicio_5-1.js"></script>
-    <script type="module">
-      import "@src/styles/volver.css";
-    </script>
   </head>
   <body bgcolor="orange">
     <center>
@@ -26,7 +23,20 @@
         src="img/Donald_1.webp"
       />
     </center>
-    <div id="volver" style="display: none">
+    <div
+      id="volver"
+      style="
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: fit-content;
+        color: white;
+
+        padding: 1rem;
+        border-radius: 0.5rem;
+        bottom: 1rem;
+        left: 1rem;
+      "
+    >
       <a href="./">Volver</a>
     </div>
   </body>

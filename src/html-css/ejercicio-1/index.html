@@ -5,9 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <script type="module">
-    import "@src/styles/volver.css";
-  </script>
+
   <style>
     header {
       border: solid 1.5px #b5f2f2;
@@ -116,7 +114,20 @@
       <i>&copy; Aprendiendo HTML basico</i>
     </footer>
   </body>
-  <div id="volver">
-    <a href="/">Volver</a>
+  <div
+    id="volver"
+    style="
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.3);
+      width: fit-content;
+      color: white;
+
+      padding: 1rem;
+      border-radius: 0.5rem;
+      bottom: 1rem;
+      left: 1rem;
+    "
+  >
+    <a href="/" style="text-decoration: none; color: white">Volver</a>
   </div>
 </html>

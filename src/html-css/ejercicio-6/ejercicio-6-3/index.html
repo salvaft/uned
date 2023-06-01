@@ -17,9 +17,6 @@
     />
     <title>Portfolio CV</title>
   </head>
-  <script type="module">
-    import "@src/styles/volver.css";
-  </script>
   <body>
     <!-- La pagina esta dividida en tres paneles. Todos dentros de un "main viewport" -->
     <!-- Los paneles los considero divisiones mas que secciones -->
@@ -97,7 +94,20 @@
       </div>
     </main>
   </body>
-  <div id="volver" style="display: none">
-    <a href="/">Volver</a>
+  <div
+    id="volver"
+    style="
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.3);
+      width: fit-content;
+      color: white;
+
+      padding: 1rem;
+      border-radius: 0.5rem;
+      bottom: 1rem;
+      left: 1rem;
+    "
+  >
+    <a href="/" style="text-decoration: none; color: white">Volver</a>
   </div>
 </html>
