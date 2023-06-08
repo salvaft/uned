@@ -3,7 +3,8 @@
 Archive of exercise files: Master en desarrollo y despliegue de aplicaciones web.
 #  TODO
 - [ ] Remove bundling except for fwjs
-- [ ] Add figma links
+- [ ] Review layout of index pages
+- [x] Add figma links
 
 ## Authors and acknowledgment
 
