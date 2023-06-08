@@ -37,7 +37,8 @@ Una app para encontrar aparcamiento.
 - Usability tests (review with real users)
 
 
-# Once the core functionalities are working and tested, and usability and accesibility principles have been applied and reviewed: TODOs
+# TODOs
+Once the core functionalities are working and tested, and usability and accesibility principles have been applied and reviewed
 - **Mobile web app version**
 - Show price estimate with 2 or 3 plausible durations
 - Enhance payment system with (bizum, save card for later, monthly wihdrawal...)
