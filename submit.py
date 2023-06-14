@@ -11,12 +11,10 @@ ALUMNO = "ferradas_troitino_salvador"
 def submit(module, ejercicio):
     if module not in ALLOWED_MODULES:
         raise ValueError(f"Variable {module} {ejercicio} does not match any allowed value. Stopping execution.")
-
     module = "html-css" if module == "html" else module
     folder = Path(f"src/{module}/") / Path(f"ejercicio-{ejercicio}")
     zipname = f"{module}_{ejercicio}_{ALUMNO}"
     print(f"File: {zipname}.tar.gz")
-
     make_tar_gz(zipname,  folder)
 
 
