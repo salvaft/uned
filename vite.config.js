@@ -17,8 +17,10 @@ export default defineConfig({
       "@lib": path.resolve(__dirname, "./src/lib"),
     },
   },
+  assetsInclude: ["**/*.md"],
   build: {
     outDir: path.join(__dirname, "dist"),
+
     assetsInlineLimit: 0,
     modulePreload: false,
     rollupOptions: {

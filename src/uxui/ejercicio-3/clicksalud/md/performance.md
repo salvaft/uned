@@ -1,0 +1,1 @@
+- Logos are PNG files that can be subject of micro optmizations
