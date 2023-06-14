@@ -1,5 +1,5 @@
 - Poor semantic HTML
-- There is no tab or keyboard navigation for the "Ordenar por..." buttons because they are implemented as  <i> and not as <button >
+- There is no tab or keyboard navigation for the "Ordenar por..." buttons because they are implemented as `<i>` and not as `<button>`
 ---
 - Some video names are not legible
 ![image](/uxui/ejercicio-3/adminflix/img/video_names.webp)
