@@ -7,13 +7,15 @@ import { glob } from "glob";
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
-const extension = "jpg";
-const exerciseImgs = glob.sync(`./src/js/ejercicio-5/**/*.${extension}`);
-// const alreadyTransformed = glob.sync(`./src/js/ejercicio-5/**/*.webp`);
+const raw_extension = "png";
+const converted_extension = "webp";
+const path = `./src/public/uxui/ejercicio-5/**/*.`;
+const exerciseImgs = glob.sync(path + raw_extension);
+const alreadyTransformed = glob.sync(path + converted_extension);
 
 exerciseImgs.forEach((img) => {
-  const newName = img.replace(`${extension}`, "avif");
-  // if (alreadyTransformed.includes(newName)) return;
+  const newName = img.replace(raw_extension, converted_extension);
+  if (alreadyTransformed.includes(newName)) return;
   console.log("Starting to process: ", img);
   sharp(img)
     .toFile(newName)
