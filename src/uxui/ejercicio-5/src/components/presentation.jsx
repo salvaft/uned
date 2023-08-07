@@ -1,5 +1,7 @@
 import Slide from "./slide.jsx";
 import Tabla from "./table.jsx";
+import tAdminflix from "../Table_data/adminflix.json";
+import tClickSalud from "../Table_data/clicksalud.json";
 
 function presentation() {
   return (
@@ -47,7 +49,7 @@ function presentation() {
       <Slide>
         <p>Flujos de navegación de Adminflix (Mocked)</p>
         <Slide>
-          <Tabla />
+          <Tabla data={tAdminflix} />
         </Slide>
         <Slide>
           <p>
@@ -80,6 +82,53 @@ function presentation() {
             Por último, todas las páginas auditadas han sido compartidas, por lo
             que aunque no sean números muy altos, los propios usuarios
             contribuyen a la difusión de la página.
+          </p>
+        </Slide>
+      </Slide>
+      <Slide>
+        <p>
+          Flujos de navegación de ClickSalud para la agenda sanitaria (Mocked)
+        </p>
+        <Slide>
+          <Tabla data={tClickSalud} />
+        </Slide>
+        <Slide>
+          <p>
+            Con más de un millón de visitas diarias, se estima que más de la
+            mitad de los afiliados a la seguridad social por Andalucía usa el
+            servicio ClicSalud para sus gestiones relacionadas con la atención
+            primaria. Una conversión del 95% y un tiempo de estancia
+            relativamente bajo indica la facilidad de los usuarios para moverse
+            por los diferentes servicios.
+          </p>
+        </Slide>
+        <Slide>
+          <p>
+            En segundo lugar en visitas, y siendo el servicio más utilizado, es
+            el de cita telemática. El porcentaje de conversion muestra que el
+            95% de los usuarios que acceden a la página, comienzan el proceso.
+            Es también la página más veces compartida, dando a intuir que los
+            usuarios la encuentran útil y recomendan el uso a los demás.
+          </p>
+        </Slide>
+
+        <Slide>
+          <p>
+            La concertación de nuevas citas está seguida de muy cerca de la
+            gestión de citas existentes. Números muy similares respecto al
+            servicio anterior, indicaría que los usuarios revisan sus citas tras
+            haber concertado una nueva, y que no solo la conversión anterior
+            muestra que se empieza un proceso de nueva cita sino que también se
+            termina.
+          </p>
+        </Slide>
+        <Slide>
+          <p>
+            Por último, la consulta de lista de espera quirúrgica es un servicio
+            más específico y que cuenta con el menor número de visitas. El
+            tiempo de estancia, el alto bounce ratio y la relativa baja
+            conversion con respecto a los otros servicios, indican que algunos
+            usuarios puedan no entender de que se trata inicialmente.
           </p>
         </Slide>
       </Slide>

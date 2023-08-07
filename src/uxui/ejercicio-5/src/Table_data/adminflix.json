@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://adminflix.ddns.net/",
+    "title": "AdminFlix",
+    "visitas": 580,
+    "bounce": "14%",
+    "tiempo": 43,
+    "conversion": "44%",
+    "compartido": 16
+  },
+  {
+    "url": "https://adminflix.ddns.net/search",
+    "title": "AdminFlix Buscador",
+    "visitas": 360,
+    "bounce": "12%",
+    "tiempo": 14,
+    "conversion": "92%",
+    "compartido": 15
+  },
+  {
+    "url": "https://adminflix.ddns.net/general",
+    "title": "AdminFlix General",
+    "visitas": 214,
+    "bounce": "54%",
+    "tiempo": 27,
+    "conversion": "82%",
+    "compartido": 17
+  },
+  {
+    "url": "https://adminflix.ddns.net/teletrabajo",
+    "title": "AdminFlix Teletrabajo",
+    "visitas": 95,
+    "bounce": "57%",
+    "tiempo": 21,
+    "conversion": "85%",
+    "compartido": 9
+  }
+]

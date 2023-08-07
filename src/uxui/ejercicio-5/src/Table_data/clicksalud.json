@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/",
+    "title": "ClicSalud+",
+    "visitas": 1207193,
+    "bounce": "2%",
+    "tiempo": 13,
+    "conversion": "95%",
+    "compartido": 56274
+  },
+  {
+    "url": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/pages/anonimo/agenda/pedirCita.jsf?opcionSeleccionada=MUPEDIRCITA",
+    "title": "Pedir cita de atencion primaria",
+    "visitas": 941360,
+    "bounce": "5%",
+    "tiempo": 32,
+    "conversion": "92%",
+    "compartido": 87822
+  },
+  {
+    "url": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/pages/anonimo/agenda/miscitas.jsf?opcionSeleccionada=MUMISCITAS",
+    "title": "Mis citas",
+    "visitas": 924751,
+    "bounce": "6%",
+    "tiempo": 47,
+    "conversion": "93%",
+    "compartido": 5194
+  },
+  {
+    "url": "https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/clicsalud/pages/anonimo/agenda/esperaQuirurgica.jsf?opcionSeleccionada=MULISTAESPERA",
+    "title": "Lista de espera quirurgica",
+    "visitas": 40195,
+    "bounce": "35%",
+    "tiempo": 23,
+    "conversion": "65%",
+    "compartido": 3275
+  }
+]
