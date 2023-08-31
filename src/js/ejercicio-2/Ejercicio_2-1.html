@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <script type="module">
       // El bundler lo organiza en un solo script. Esto es para poder usar el alias
-      import "@src/main.js"
+      import "@src/main.js";
     </script>
     <title>Ejercicio 2-1</title>
   </head>
@@ -14,7 +14,7 @@
       <h1>Ejercicio 2-1</h1>
       <button>Empezar</button>
     </header>
-    <main >
+    <main>
       <section class="flex-space">
         <h2>Usando una función:</h2>
         <div id="comentario"></div>
@@ -57,7 +57,7 @@
         const text = {
           [age < 14]: `Tienes ${age} años, eres muy jovencito`,
           [age >= 14 &&
-            age <
+          age <
             18]: `Tienes ${age} años, probablemente seas un adolescente insoportable`,
           [age >= 18 && age < 65]: `Tienes ${age} años, eres mayor de edad`,
           [age >= 65]: "Disfruta de tu jubilación",
@@ -68,7 +68,7 @@
         document.getElementById("comentario2").innerHTML = text[true];
       });
 
-        // Pedir la edad hasta que se introduzca un dato correcto
+      // Pedir la edad hasta que se introduzca un dato correcto
     </script>
   </body>
 </html>

@@ -1,278 +1,256 @@
 /* Variables globales. Heredadas de open props */
 :root {
-    --font-size-title: var(--font-size-5);
-    --font-size-subtitle: var(--font-size-3);
-    --font-size-prose: var(--font-size-2);
-    --font-size-caption: var(--font-size-1);
-    --brand-accent: var(--sand-10);
-    --brand-color: var(--sand-8);
-    --brand-muted: var(--sand-6);
+  --font-size-title: var(--font-size-5);
+  --font-size-subtitle: var(--font-size-3);
+  --font-size-prose: var(--font-size-2);
+  --font-size-caption: var(--font-size-1);
+  --brand-accent: var(--sand-10);
+  --brand-color: var(--sand-8);
+  --brand-muted: var(--sand-6);
 
-    --color-surface-1: var(--sand-0);
-    --color-surface-2: var(--sand-2);
-    --color-surface-3: var(--sand-8);
-    --color-surface-4: var(--sand-11)
+  --color-surface-1: var(--sand-0);
+  --color-surface-2: var(--sand-2);
+  --color-surface-3: var(--sand-8);
+  --color-surface-4: var(--sand-11);
 }
 
 /*  Resets */
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-sans);
-    color: var(--brand-color)
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  color: var(--brand-color);
 }
 
 /* Estilos por defecto de los elementos mas utilizados */
 h1 {
-    color: var(--brand-accent);
-    font-size: var(--font-size-title);
+  color: var(--brand-accent);
+  font-size: var(--font-size-title);
 }
 
 p {
-    font-size: var(--font-size-prose);
+  font-size: var(--font-size-prose);
 }
 
 hr {
-    border: none;
-    border-top: 1px solid var(--color-surface-2);
+  border: none;
+  border-top: 1px solid var(--color-surface-2);
 }
 
 /* Estilos por defecto de elementos contenedores (layout mas que nada) */
 body {
-    max-width: var(--size-lg);
-    margin: auto;
-    background-color: var(--color-surface-1);
-
+  max-width: var(--size-lg);
+  margin: auto;
+  background-color: var(--color-surface-1);
 }
 
 .layout--wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: var(--size-9);
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--size-9);
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: var(--size-9);
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--size-9);
 
-    /* Me he permitido probar el anidado de CSS, disponible en Chrome a partir de la version 112 */
-    &>section {
-        padding-inline: var(--size-7);
-    }
+  /* Me he permitido probar el anidado de CSS, disponible en Chrome a partir de la version 112 */
+  & > section {
+    padding-inline: var(--size-7);
+  }
 }
 
-
-
 .card--grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: var(--size-5);
-    column-gap: var(--size-8);
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: var(--size-5);
+  column-gap: var(--size-8);
+  justify-content: center;
 }
 
 article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--size-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--size-4);
 
-    /* El titulo del articulo tiene la fuente un poco mas pequena que un encabezado de la cabecera */
-    &>h1 {
-        font-size: var(--font-size-subtitle);
+  /* El titulo del articulo tiene la fuente un poco mas pequena que un encabezado de la cabecera */
+  & > h1 {
+    font-size: var(--font-size-subtitle);
+  }
 
-    }
-
-    &>p {
-        max-width: 45ch;
-    }
-
+  & > p {
+    max-width: 45ch;
+  }
 }
-
-
 
 footer {
-    padding: var(--size-7);
-    display: grid;
-    place-content: center;
+  padding: var(--size-7);
+  display: grid;
+  place-content: center;
 }
-
 
 /* Estilos "componentizados" */
 .hero {
-    background: center no-repeat url(https://placehold.co/1024x400/e6e4dc/FFF);
-    height: 30dvh;
-    min-height: 400px;
+  background: center no-repeat url(https://placehold.co/1024x400/e6e4dc/FFF);
+  height: 30dvh;
+  min-height: 400px;
 }
 
-
 .hero--article {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--size-10);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-10);
 
-    &>h1 {
-        font-size: var(--font-size-title);
-    }
+  & > h1 {
+    font-size: var(--font-size-title);
+  }
 
-    &>p {
-        color: var(--brand-muted);
-    }
-
+  & > p {
+    color: var(--brand-muted);
+  }
 }
 
 .btn {
-    display: grid;
-    place-content: center;
-    padding: var(--size-3);
-    border-radius: var(--radius-2);
-    width: fit-content;
+  display: grid;
+  place-content: center;
+  padding: var(--size-3);
+  border-radius: var(--radius-2);
+  width: fit-content;
 }
 
 .btn--accent {
+  background-color: var(--color-surface-4);
+  color: var(--color-surface-1);
+  box-shadow: none;
+  border: none;
 
-    background-color: var(--color-surface-4);
-    color: var(--color-surface-1);
-    box-shadow: none;
-    border: none;
-
-    &:hover {
-        background-color: var(--color-surface-3);
-
-    }
+  &:hover {
+    background-color: var(--color-surface-3);
+  }
 }
 
 .btn--secondary {
-    background-color: transparent;
-    color: var(--brand-accent);
-    padding: var(--size-2) var(--size-8);
-    box-shadow: none;
-    border: 4px solid var(--brand-accent);
+  background-color: transparent;
+  color: var(--brand-accent);
+  padding: var(--size-2) var(--size-8);
+  box-shadow: none;
+  border: 4px solid var(--brand-accent);
 
-    &:hover {
-        background-color: var(--color-surface-2);
-        color: var(--brand-muted);
-        border-color: transparent;
-    }
+  &:hover {
+    background-color: var(--color-surface-2);
+    color: var(--brand-muted);
+    border-color: transparent;
+  }
 }
-
 
 .card {
+  display: grid;
+  row-gap: var(--size-3);
+  column-gap: var(--size-2);
+  /* Template areas permite confeccionar la disposicion de una manera mas declarativa que ir poniendo cuantas filas y columnas ocupa cada hijo */
+  grid-template-areas:
+    "🎴 h"
+    ". p";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: min-content 1fr;
+
+  & > .logo {
+    grid-area: 🎴;
+    border-radius: var(--radius-round);
+    background-color: var(--color-surface-2);
+    color: var(--color-surface-3);
     display: grid;
-    row-gap: var(--size-3);
-    column-gap: var(--size-2);
-    /* Template areas permite confeccionar la disposicion de una manera mas declarativa que ir poniendo cuantas filas y columnas ocupa cada hijo */
-    grid-template-areas:
-        "🎴 h"
-        ". p";
-    grid-template-rows: auto 1fr;
-    grid-template-columns: min-content 1fr;
+    place-content: center;
+    padding: var(--size-2);
+  }
 
-    &>.logo {
-        grid-area: 🎴;
-        border-radius: var(--radius-round);
-        background-color: var(--color-surface-2);
-        color: var(--color-surface-3);
-        display: grid;
-        place-content: center;
-        padding: var(--size-2)
-    }
+  & > h1 {
+    grid-area: h;
+    align-self: end;
+    justify-self: start;
+  }
 
-    &>h1 {
-        grid-area: h;
-        align-self: end;
-        justify-self: start;
-    }
-
-    &>p {
-        grid-area: p;
-        max-width: 35ch;
-    }
+  & > p {
+    grid-area: p;
+    max-width: 35ch;
+  }
 }
-
 
 /* Retoques de secciones en particular. Cada una tiene su intringulis */
 #haceres {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--size-6);
-
+  display: flex;
+  justify-content: space-between;
+  gap: var(--size-6);
 }
 
 #work {
-    display: grid;
-    row-gap: var(--size-6);
+  display: grid;
+  row-gap: var(--size-6);
 
-    &>header {
-        display: grid;
-        row-gap: var(--size-4);
-        text-align: center;
-        width: 70%;
-        margin-inline: auto;
-    }
+  & > header {
+    display: grid;
+    row-gap: var(--size-4);
+    text-align: center;
+    width: 70%;
+    margin-inline: auto;
+  }
 }
 
 #social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "🗞️ 📹";
 
-        "🗞️ 📹";
+  & > article {
+    grid-area: 🗞️;
 
-    &>article {
-        grid-area: 🗞️;
-
-        &>h1 {
-            font-size: var(--font-size-title);
-        }
+    & > h1 {
+      font-size: var(--font-size-title);
     }
+  }
 
-    &>video {
-        max-width: 100%;
-        min-width: 100%;
+  & > video {
+    max-width: 100%;
+    min-width: 100%;
 
-        grid-area: 📹;
-
-    }
-
+    grid-area: 📹;
+  }
 }
-
 
 /* Estilos del modal cuando esta abierto */
 dialog:modal {
-    position: fixed;
-    margin: auto;
-    display: grid;
-    place-content: center;
+  position: fixed;
+  margin: auto;
+  display: grid;
+  place-content: center;
 
-    &>video {
-        max-width: 1440px;
-        aspect-ratio: 16/9;
-    }
+  & > video {
+    max-width: 1440px;
+    aspect-ratio: 16/9;
+  }
 
+  & > form {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-    &>form {
-        background-color: transparent;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+  & .btn {
+    background-color: transparent;
+    border: transparent;
+  }
 
-    & .btn {
-        background-color: transparent;
-        border: transparent;
-    }
-
-    /* El backdrop es la capa que queda detras del modal. Todo nativo */
-    &::backdrop {
-        background: rgba(0, 0, 0, 0.3);
-    }
-
+  /* El backdrop es la capa que queda detras del modal. Todo nativo */
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+  }
 }

@@ -9,7 +9,7 @@ import { glob } from "glob";
 
 const raw_extension = "png";
 const converted_extension = "webp";
-const path = `./src/public/uxui/ejercicio-5/**/*.`;
+const path = `./src/public/uxui/ejercicio-6/**/*.`;
 const exerciseImgs = glob.sync(path + raw_extension);
 const alreadyTransformed = glob.sync(path + converted_extension);
 

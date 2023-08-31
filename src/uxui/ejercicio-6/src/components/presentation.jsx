@@ -63,7 +63,7 @@ function presentation() {
       <Slide>
         <Slide>
           <h4>Iniciar el flujo de navegacion</h4>
-          <div className="grid place-content-center">
+          <div className=" grid  place-content-center">
             <img
               src="/uxui/ejercicio-6/Desktop-2.webp"
               alt="Landing page de Parkineo"

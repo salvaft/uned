@@ -1,7 +1,7 @@
 :root {
   --clear: #eeeee7;
   --dark-grey: #323230;
-  --light-grey: #a8a8a8
+  --light-grey: #a8a8a8;
 }
 
 * {
@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   padding: 0;
 }
 
@@ -82,14 +82,12 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 /* about panel */
 .panel.about {
   /* La imagen sea 3 veces el texto */
   grid-template-rows: 3fr 1fr;
-
 }
 
 /* El ancho de la imagen quiero que sea el que tiene en la cuadricula y que no expanda la mega resolucion que tiene */
@@ -166,14 +164,23 @@ main {
 }
 
 .timeline-item:last-child {
-  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
-  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+  -o-border-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
 }
-
 
 /* El responsive es lo importante de esta pagina */
 /* Los breakpoints son medio estandares. En 1200 considero que no hace falta. Cogi 680, 960 y 1400 */
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
   main {
     grid-template-columns: 1fr 1fr;
   }
@@ -190,10 +197,9 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-
 }
 
-@media screen and (max-width:960px) {
+@media screen and (max-width: 960px) {
   main {
     /* Solo con una columna */
     /* Podria quitar la regla del specifier de 680px y quizas sea una mala idea pero me gusta ser explicito en las dos media queries... */
@@ -211,11 +217,10 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-
 }
 
 /* El ultimo breakpoint, el mas pequeno */
-@media screen and (max-width:680px) {
+@media screen and (max-width: 680px) {
   main {
     /* Cada panel ocupe lo que necesite, al contrario que en el desktop, cada uno en una fila y solo una columna */
     grid-template-columns: 1fr;

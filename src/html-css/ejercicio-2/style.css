@@ -1,80 +1,78 @@
 :root {
-    /* Variables globales en CSS */
-    --aqua: #b5f2f2;
-    --header-opacity: 0.3;
-    --cyan: #1aaaaa;
-    --rojo: #d61d1d
+  /* Variables globales en CSS */
+  --aqua: #b5f2f2;
+  --header-opacity: 0.3;
+  --cyan: #1aaaaa;
+  --rojo: #d61d1d;
 }
 
-
-
 header {
-    /* Borde del primer parrafo */
-    border: solid 1.5px var(--aqua);
-    font: normal 20px quicksand;
-    color: rgba(0, 0, 0, var(--header-opacity));
-    letter-spacing: 2px;
-    /* Los text nodes se centran en su contenedor */
-    text-align: center;
-    /* Texto en mayusculas */
-    text-transform: uppercase;
-    /* Dimensiones del radio de las esquinas de la diagonal segun input */
-    border-radius: 30px 0px 30px 0px;
-    /* Overriding default margin */
-    margin-bottom: 0;
+  /* Borde del primer parrafo */
+  border: solid 1.5px var(--aqua);
+  font: normal 20px quicksand;
+  color: rgba(0, 0, 0, var(--header-opacity));
+  letter-spacing: 2px;
+  /* Los text nodes se centran en su contenedor */
+  text-align: center;
+  /* Texto en mayusculas */
+  text-transform: uppercase;
+  /* Dimensiones del radio de las esquinas de la diagonal segun input */
+  border-radius: 30px 0px 30px 0px;
+  /* Overriding default margin */
+  margin-bottom: 0;
 }
 
 section {
-    /* Evitar colapso de margenes*/
-    overflow: auto;
+  /* Evitar colapso de margenes*/
+  overflow: auto;
 }
 
 #history {
-    /* padding en izquierda y derecha */
-    padding-inline: 5px;
-    font: normal 18px quicksand;
-    color: #ffffff;
-    /* Espaciado entre letras de un text node */
-    letter-spacing: 2px;
-    text-align: justify;
-    text-transform: uppercase;
-    background-color: #ccc;
-    /* Esquinas redondeadas pero sin borde visible */
-    border-radius: 30px;
+  /* padding en izquierda y derecha */
+  padding-inline: 5px;
+  font: normal 18px quicksand;
+  color: #ffffff;
+  /* Espaciado entre letras de un text node */
+  letter-spacing: 2px;
+  text-align: justify;
+  text-transform: uppercase;
+  background-color: #ccc;
+  /* Esquinas redondeadas pero sin borde visible */
+  border-radius: 30px;
 }
 
 #format {
-    border: dashed 1.5px black;
-    font: normal 18px quicksand;
-    letter-spacing: 25px;
-    color: var(--cyan);
-    text-align: center;
-    border-radius: 80px 0px 80px 0px;
+  border: dashed 1.5px black;
+  font: normal 18px quicksand;
+  letter-spacing: 25px;
+  color: var(--cyan);
+  text-align: center;
+  border-radius: 80px 0px 80px 0px;
 }
 
 #format p {
-    /* Margen a ojo entre el parrafo y el contenedor */
-    margin-bottom: 1.4rem;
+  /* Margen a ojo entre el parrafo y el contenedor */
+  margin-bottom: 1.4rem;
 }
 
 #logo {
-    width: 200px;
-    /* Aspecto cuadrado */
-    aspect-ratio: 1;
-    /* Replaced elements como imagenes son inline por defecto */
-    display: block;
-    /* Centra el contenido a base de aplicar el mismo margen a ambos lados hasta desde las dimensiones del contenido hasta las dimensiones del contenedor */
-    margin-inline: auto;
+  width: 200px;
+  /* Aspecto cuadrado */
+  aspect-ratio: 1;
+  /* Replaced elements como imagenes son inline por defecto */
+  display: block;
+  /* Centra el contenido a base de aplicar el mismo margen a ambos lados hasta desde las dimensiones del contenido hasta las dimensiones del contenedor */
+  margin-inline: auto;
 }
 
 footer {
-    border: solid 1.5px var(--aqua);
-    font: normal 18px quicksand;
-    color: var(--rojo);
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 80px 0px 80px 0px;
-    /* Padding todo alrededor  */
-    padding: 4px;
+  border: solid 1.5px var(--aqua);
+  font: normal 18px quicksand;
+  color: var(--rojo);
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 80px 0px 80px 0px;
+  /* Padding todo alrededor  */
+  padding: 4px;
 }

@@ -2,54 +2,52 @@
 /* CSS Document */
 
 * {
-	outline: none;
+  outline: none;
 }
 
 form#pago {
-	margin: auto;
-	background: #EEEEEE;
-	color: black;
-	font-size: 15px;
-	padding: 30px;
-	width: 350px;
-	border: solid 5px LightSteelBlue;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+  margin: auto;
+  background: #eeeeee;
+  color: black;
+  font-size: 15px;
+  padding: 30px;
+  width: 350px;
+  border: solid 5px LightSteelBlue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 form#pago fieldset {
-	border: yes;
+  border: yes;
 }
-
 
 form#pago input {
-	font-size: 12px;
-	background: #FFFFEE;
-	border: solid 1px Green;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	float: right;
-	margin-right: 15px;
-	width: 200px;
+  font-size: 12px;
+  background: #ffffee;
+  border: solid 1px Green;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  float: right;
+  margin-right: 15px;
+  width: 200px;
 }
 
-
 form#pago ol li {
-	line-height: 25px;
-	list-style: none;
+  line-height: 25px;
+  list-style: none;
 }
 
 form#pago [required] {
-	border: solid 1px red;
+  border: solid 1px red;
 }
 
 input:required {
-	outline: 1px solid red;
+  outline: 1px solid red;
 }
 
 form#pago input:focus {
-	border-color: goldenrod;
-	/* background-color: #4d4d4d; */
+  border-color: goldenrod;
+  /* background-color: #4d4d4d; */
 }

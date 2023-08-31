@@ -382,7 +382,7 @@ fieldset {
   margin-top: 8px;
 }
 
-.resourceList>li {
+.resourceList > li {
   display: inline-block;
   padding: 0.5em 1em;
   -moz-border-radius: 0.25em;

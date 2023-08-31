@@ -11,6 +11,6 @@ const a = glob.sync("./src/**/*.html");
 const b = glob.sync(path.resolve(__dirname, "src/**/*.html"));
 
 const c = glob.sync(path.resolve(__dirname, "src/**/*.html"), {
-  ignore: 'src/fwjs/**'
-})
+  ignore: "src/fwjs/**",
+});
 console.log(c);
