@@ -1,0 +1,6 @@
+version: '3'
+services:
+  uned:
+    build: . # Build the Docker image from the current directory (where the Dockerfile is)
+    ports:
+      - "4173:4173" 
